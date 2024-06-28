@@ -1,0 +1,8 @@
+[gd_scene load_steps=3 format=3 uid="uid://df7x8fnts14e4"]
+
+[ext_resource type="Texture2D" uid="uid://cmlghs4sk8rfv" path="res://Assets/UI/hungerempty.png" id="1_4wcm0"]
+[ext_resource type="Script" path="res://Scripts/hunger_ui_icon.gd" id="2_0oj5w"]
+
+[node name="HungerIcon" type="TextureRect"]
+texture = ExtResource("1_4wcm0")
+script = ExtResource("2_0oj5w")

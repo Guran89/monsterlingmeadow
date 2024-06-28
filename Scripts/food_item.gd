@@ -1,6 +1,14 @@
 extends TextureRect
 
-#const TEXTURE = preload("res://assets/UI/chickenskewer.png")
+var _food
+
+func set_food(food):
+	_food = food
+	texture = food.texture
+	return self
+
+func get_food():
+	return _food
 
 func setScale(newScale):
 	scale = Vector2(newScale, newScale)

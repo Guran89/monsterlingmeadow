@@ -1,0 +1,10 @@
+[gd_resource type="Resource" load_steps=3 format=3 uid="uid://c0pmpwkq0mour"]
+
+[ext_resource type="Script" path="res://Scripts/Data/food.gd" id="1_xhsfa"]
+[ext_resource type="Texture2D" uid="uid://r2njkb2ffao2" path="res://Assets/UI/chickenskewer.png" id="2_meyq6"]
+
+[resource]
+script = ExtResource("1_xhsfa")
+nutrition = 2
+name = "Chicken Skewer"
+texture = ExtResource("2_meyq6")
