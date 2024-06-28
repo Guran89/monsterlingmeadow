@@ -1,10 +1,10 @@
 [gd_scene load_steps=11 format=3 uid="uid://bqqjh8bexynur"]
 
 [ext_resource type="Script" path="res://Scripts/main.gd" id="1_mt56x"]
-[ext_resource type="Texture2D" uid="uid://ctrqgo4rmp6x4" path="res://Assets/Backgrounds/day.png" id="1_nf48f"]
+[ext_resource type="Texture2D" uid="uid://ctrqgo4rmp6x4" path="res://assets/Backgrounds/day.png" id="1_nf48f"]
 [ext_resource type="PackedScene" uid="uid://bcbf5j30mg5kx" path="res://Scenes/monsterling.tscn" id="2_c06ey"]
 [ext_resource type="Script" path="res://Scripts/background.gd" id="2_egmxs"]
-[ext_resource type="Texture2D" uid="uid://c1goxh1wjeqkr" path="res://Assets/UI/foodicon.png" id="5_uy6j2"]
+[ext_resource type="Texture2D" uid="uid://c1goxh1wjeqkr" path="res://assets/UI/foodicon.png" id="5_uy6j2"]
 [ext_resource type="Script" path="res://Scripts/food_items.gd" id="7_35yl4"]
 [ext_resource type="Script" path="res://Scripts/drag.gd" id="7_pde2k"]
 [ext_resource type="Script" path="res://Scripts/hunger_ui.gd" id="8_v1v28"]
@@ -27,9 +27,10 @@ scale = Vector2(2, 2)
 [node name="CanvasLayer" type="CanvasLayer" parent="."]
 
 [node name="Hunger" type="HBoxContainer" parent="CanvasLayer"]
-offset_top = 56.0
-offset_right = 83.0
-offset_bottom = 81.0
+offset_left = 10.0
+offset_top = 10.0
+offset_right = 93.0
+offset_bottom = 35.0
 scale = Vector2(2, 2)
 mouse_filter = 2
 theme_override_constants/separation = 0
@@ -39,8 +40,10 @@ script = ExtResource("8_v1v28")
 anchors_preset = 2
 anchor_top = 1.0
 anchor_bottom = 1.0
-offset_top = -132.0
-offset_right = 42.0
+offset_left = 35.0
+offset_top = -184.0
+offset_right = 85.0
+offset_bottom = -52.0
 grow_vertical = 0
 
 [node name="FoodMenu" type="VBoxContainer" parent="CanvasLayer/BottomMenu"]
@@ -53,15 +56,28 @@ layout_mode = 2
 script = ExtResource("7_35yl4")
 
 [node name="Toggle" type="Button" parent="CanvasLayer/BottomMenu/FoodMenu"]
+custom_minimum_size = Vector2(50, 50)
 layout_mode = 2
 icon = ExtResource("5_uy6j2")
+icon_alignment = 1
 
 [node name="Drag" type="TextureRect" parent="."]
-offset_left = 85.0
-offset_top = 360.0
-offset_right = 125.0
-offset_bottom = 400.0
+custom_minimum_size = Vector2(50, 50)
+anchors_preset = 8
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+offset_left = -20.0
+offset_top = -20.0
+offset_right = 20.0
+offset_bottom = 20.0
+grow_horizontal = 2
+grow_vertical = 2
+size_flags_horizontal = 4
+size_flags_vertical = 4
 mouse_filter = 2
+stretch_mode = 3
 script = ExtResource("7_pde2k")
 
 [node name="Ambience" type="AudioStreamPlayer" parent="."]

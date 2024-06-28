@@ -3,15 +3,15 @@
 importer="texture"
 type="CompressedTexture2D"
 uid="uid://cmlghs4sk8rfv"
-path="res://.godot/imported/hungerempty.png-4d02f6f9674bbc4573ed856cb031b949.ctex"
+path="res://.godot/imported/hungerempty.png-eaf739ec8ca5f4da16bf76613de599bb.ctex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://Assets/UI/hungerempty.png"
-dest_files=["res://.godot/imported/hungerempty.png-4d02f6f9674bbc4573ed856cb031b949.ctex"]
+source_file="res://assets/UI/hungerempty.png"
+dest_files=["res://.godot/imported/hungerempty.png-eaf739ec8ca5f4da16bf76613de599bb.ctex"]
 
 [params]
 

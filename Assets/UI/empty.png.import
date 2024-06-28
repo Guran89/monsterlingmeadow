@@ -2,16 +2,16 @@
 
 importer="texture"
 type="CompressedTexture2D"
-uid="uid://c74at6btiunhs"
-path="res://.godot/imported/eyes4_idle.png-afdf92bd1da76b375a4a484568804b38.ctex"
+uid="uid://c0h33cfesrrre"
+path="res://.godot/imported/empty.png-03ab9d8de54265d802643e2daec4ba13.ctex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://assets/Monsterling/eyes/eyes4_idle.png"
-dest_files=["res://.godot/imported/eyes4_idle.png-afdf92bd1da76b375a4a484568804b38.ctex"]
+source_file="res://assets/UI/empty.png"
+dest_files=["res://.godot/imported/empty.png-03ab9d8de54265d802643e2daec4ba13.ctex"]
 
 [params]
 
