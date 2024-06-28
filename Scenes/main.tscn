@@ -1,0 +1,99 @@
+[gd_scene load_steps=11 format=3 uid="uid://bqqjh8bexynur"]
+
+[ext_resource type="Texture2D" uid="uid://ctrqgo4rmp6x4" path="res://Backgrounds/day.png" id="1_nf48f"]
+[ext_resource type="PackedScene" uid="uid://bcbf5j30mg5kx" path="res://Scenes/monsterling_new.tscn" id="2_c06ey"]
+[ext_resource type="Texture2D" uid="uid://cmlghs4sk8rfv" path="res://assets/UI/hungerempty.png" id="3_1pghd"]
+[ext_resource type="Script" path="res://Scenes/UI.gd" id="3_fnuf7"]
+[ext_resource type="Texture2D" uid="uid://r2njkb2ffao2" path="res://assets/UI/chickenskewer.png" id="4_nmbkt"]
+[ext_resource type="Texture2D" uid="uid://depva61mffbvc" path="res://assets/UI/rawchicken.png" id="5_bupr8"]
+[ext_resource type="Script" path="res://Scripts/object.gd" id="5_joggo"]
+[ext_resource type="Texture2D" uid="uid://c1goxh1wjeqkr" path="res://assets/UI/foodicon.png" id="5_uy6j2"]
+[ext_resource type="Script" path="res://Scenes/FoodMenuButton.gd" id="8_1mnau"]
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_1jmn1"]
+size = Vector2(47.3333, 47.3333)
+
+[node name="Main" type="Node2D"]
+
+[node name="Day" type="Sprite2D" parent="."]
+position = Vector2(192, 424)
+scale = Vector2(2.89062, 2.99147)
+texture = ExtResource("1_nf48f")
+
+[node name="Monsterling" parent="." instance=ExtResource("2_c06ey")]
+position = Vector2(200, 568)
+scale = Vector2(2, 2)
+
+[node name="CanvasLayer" type="CanvasLayer" parent="."]
+script = ExtResource("3_fnuf7")
+
+[node name="FoodItems" type="VBoxContainer" parent="CanvasLayer"]
+offset_left = 24.0
+offset_top = 616.0
+offset_right = 71.0
+offset_bottom = 707.0
+scale = Vector2(1.5, 1.5)
+
+[node name="ChickenSkewer" type="TextureRect" parent="CanvasLayer/FoodItems"]
+layout_mode = 2
+texture = ExtResource("4_nmbkt")
+script = ExtResource("5_joggo")
+
+[node name="Area2D" type="Area2D" parent="CanvasLayer/FoodItems/ChickenSkewer"]
+position = Vector2(21.3333, 26.6667)
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="CanvasLayer/FoodItems/ChickenSkewer/Area2D"]
+shape = SubResource("RectangleShape2D_1jmn1")
+
+[node name="RawChicken" type="TextureRect" parent="CanvasLayer/FoodItems"]
+layout_mode = 2
+texture = ExtResource("5_bupr8")
+script = ExtResource("5_joggo")
+
+[node name="Area2D" type="Area2D" parent="CanvasLayer/FoodItems/RawChicken"]
+position = Vector2(21.3333, 20.6667)
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="CanvasLayer/FoodItems/RawChicken/Area2D"]
+shape = SubResource("RectangleShape2D_1jmn1")
+
+[node name="Hunger" type="HBoxContainer" parent="CanvasLayer"]
+offset_top = 56.0
+offset_right = 83.0
+offset_bottom = 81.0
+scale = Vector2(2, 2)
+theme_override_constants/separation = 0
+
+[node name="hunger1" type="TextureRect" parent="CanvasLayer/Hunger"]
+layout_mode = 2
+texture = ExtResource("3_1pghd")
+
+[node name="hunger2" type="TextureRect" parent="CanvasLayer/Hunger"]
+layout_mode = 2
+texture = ExtResource("3_1pghd")
+
+[node name="hunger3" type="TextureRect" parent="CanvasLayer/Hunger"]
+layout_mode = 2
+texture = ExtResource("3_1pghd")
+
+[node name="Timer" type="Timer" parent="CanvasLayer"]
+wait_time = 5.0
+autostart = true
+
+[node name="Menu" type="HBoxContainer" parent="CanvasLayer"]
+offset_left = 16.0
+offset_top = 760.0
+offset_right = 58.0
+offset_bottom = 797.0
+scale = Vector2(2, 2)
+
+[node name="Button" type="Button" parent="CanvasLayer/Menu"]
+layout_mode = 2
+icon = ExtResource("5_uy6j2")
+script = ExtResource("8_1mnau")
+
+[connection signal="mouse_entered" from="CanvasLayer/FoodItems/ChickenSkewer/Area2D" to="CanvasLayer/FoodItems/ChickenSkewer" method="_on_area_2d_mouse_entered"]
+[connection signal="mouse_exited" from="CanvasLayer/FoodItems/ChickenSkewer/Area2D" to="CanvasLayer/FoodItems/ChickenSkewer" method="_on_area_2d_mouse_exited"]
+[connection signal="mouse_entered" from="CanvasLayer/FoodItems/RawChicken/Area2D" to="CanvasLayer/FoodItems/RawChicken" method="_on_area_2d_mouse_entered"]
+[connection signal="mouse_exited" from="CanvasLayer/FoodItems/RawChicken/Area2D" to="CanvasLayer/FoodItems/RawChicken" method="_on_area_2d_mouse_exited"]
+[connection signal="timeout" from="CanvasLayer/Timer" to="CanvasLayer" method="_on_timer_timeout"]
+[connection signal="pressed" from="CanvasLayer/Menu/Button" to="CanvasLayer" method="_on_button_pressed"]
