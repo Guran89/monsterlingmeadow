@@ -1,0 +1,68 @@
+[gd_resource type="Resource" load_steps=12 format=3 uid="uid://qm4bn5f6qp71"]
+
+[ext_resource type="Texture2D" uid="uid://0u0y0hp112ew" path="res://Assets/Monsterling/heads/head3_idle.png" id="1_5gfn4"]
+[ext_resource type="Script" path="res://Scripts/Data/Monsterling/head.gd" id="1_l1y58"]
+[ext_resource type="Texture2D" uid="uid://4ef3oqxtall8" path="res://Assets/Monsterling/heads/head3.png" id="3_qd6ey"]
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_args7"]
+atlas = ExtResource("1_5gfn4")
+region = Rect2(0, 0, 128, 128)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_k51cr"]
+atlas = ExtResource("1_5gfn4")
+region = Rect2(128, 0, 128, 128)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_ue7wx"]
+atlas = ExtResource("1_5gfn4")
+region = Rect2(256, 0, 128, 128)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_cj5f1"]
+atlas = ExtResource("1_5gfn4")
+region = Rect2(384, 0, 128, 128)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_fkm5i"]
+atlas = ExtResource("1_5gfn4")
+region = Rect2(512, 0, 128, 128)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_kxnvt"]
+atlas = ExtResource("1_5gfn4")
+region = Rect2(640, 0, 128, 128)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_ec2st"]
+atlas = ExtResource("1_5gfn4")
+region = Rect2(768, 0, 128, 128)
+
+[sub_resource type="SpriteFrames" id="SpriteFrames_wpi7f"]
+animations = [{
+"frames": [{
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_args7")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_k51cr")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_ue7wx")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_cj5f1")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_fkm5i")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_kxnvt")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_ec2st")
+}],
+"loop": true,
+"name": &"default",
+"speed": 5.0
+}]
+
+[resource]
+script = ExtResource("1_l1y58")
+idle_animation = SubResource("SpriteFrames_wpi7f")
+name = ""
+texture = ExtResource("3_qd6ey")
