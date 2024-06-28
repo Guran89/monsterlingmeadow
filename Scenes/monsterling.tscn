@@ -469,78 +469,6 @@ animations = [{
 "speed": 5.0
 }]
 
-[sub_resource type="AtlasTexture" id="AtlasTexture_d1sj2"]
-atlas = ExtResource("12_hnb56")
-region = Rect2(0, 0, 128, 128)
-
-[sub_resource type="AtlasTexture" id="AtlasTexture_fc2bn"]
-atlas = ExtResource("12_hnb56")
-region = Rect2(128, 0, 128, 128)
-
-[sub_resource type="AtlasTexture" id="AtlasTexture_jlahc"]
-atlas = ExtResource("12_hnb56")
-region = Rect2(256, 0, 128, 128)
-
-[sub_resource type="AtlasTexture" id="AtlasTexture_8u7xg"]
-atlas = ExtResource("12_hnb56")
-region = Rect2(384, 0, 128, 128)
-
-[sub_resource type="AtlasTexture" id="AtlasTexture_ues2m"]
-atlas = ExtResource("13_kvc1o")
-region = Rect2(0, 0, 128, 128)
-
-[sub_resource type="AtlasTexture" id="AtlasTexture_bt5yf"]
-atlas = ExtResource("14_di8xu")
-region = Rect2(0, 0, 128, 128)
-
-[sub_resource type="AtlasTexture" id="AtlasTexture_xro88"]
-atlas = ExtResource("15_586ef")
-region = Rect2(0, 0, 128, 128)
-
-[sub_resource type="SpriteFrames" id="SpriteFrames_0ihc2"]
-animations = [{
-"frames": [{
-"duration": 1.0,
-"texture": SubResource("AtlasTexture_d1sj2")
-}, {
-"duration": 1.0,
-"texture": SubResource("AtlasTexture_fc2bn")
-}, {
-"duration": 1.0,
-"texture": SubResource("AtlasTexture_jlahc")
-}, {
-"duration": 1.0,
-"texture": SubResource("AtlasTexture_8u7xg")
-}],
-"loop": true,
-"name": &"idle1",
-"speed": 5.0
-}, {
-"frames": [{
-"duration": 1.0,
-"texture": SubResource("AtlasTexture_ues2m")
-}],
-"loop": true,
-"name": &"idle2",
-"speed": 5.0
-}, {
-"frames": [{
-"duration": 1.0,
-"texture": SubResource("AtlasTexture_bt5yf")
-}],
-"loop": true,
-"name": &"idle3",
-"speed": 5.0
-}, {
-"frames": [{
-"duration": 1.0,
-"texture": SubResource("AtlasTexture_xro88")
-}],
-"loop": true,
-"name": &"idle4",
-"speed": 5.0
-}]
-
 [sub_resource type="AtlasTexture" id="AtlasTexture_ubb4e"]
 atlas = ExtResource("16_6vfrm")
 region = Rect2(0, 0, 128, 128)
@@ -725,6 +653,78 @@ animations = [{
 "speed": 5.0
 }]
 
+[sub_resource type="AtlasTexture" id="AtlasTexture_d1sj2"]
+atlas = ExtResource("12_hnb56")
+region = Rect2(0, 0, 128, 128)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_fc2bn"]
+atlas = ExtResource("12_hnb56")
+region = Rect2(128, 0, 128, 128)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_jlahc"]
+atlas = ExtResource("12_hnb56")
+region = Rect2(256, 0, 128, 128)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_8u7xg"]
+atlas = ExtResource("12_hnb56")
+region = Rect2(384, 0, 128, 128)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_ues2m"]
+atlas = ExtResource("13_kvc1o")
+region = Rect2(0, 0, 128, 128)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_bt5yf"]
+atlas = ExtResource("14_di8xu")
+region = Rect2(0, 0, 128, 128)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_xro88"]
+atlas = ExtResource("15_586ef")
+region = Rect2(0, 0, 128, 128)
+
+[sub_resource type="SpriteFrames" id="SpriteFrames_0ihc2"]
+animations = [{
+"frames": [{
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_d1sj2")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_fc2bn")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_jlahc")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_8u7xg")
+}],
+"loop": true,
+"name": &"idle1",
+"speed": 5.0
+}, {
+"frames": [{
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_ues2m")
+}],
+"loop": true,
+"name": &"idle2",
+"speed": 5.0
+}, {
+"frames": [{
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_bt5yf")
+}],
+"loop": true,
+"name": &"idle3",
+"speed": 5.0
+}, {
+"frames": [{
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_xro88")
+}],
+"loop": true,
+"name": &"idle4",
+"speed": 5.0
+}]
+
 [sub_resource type="CircleShape2D" id="CircleShape2D_wcdec"]
 radius = 40.0
 
@@ -747,13 +747,13 @@ animation = &"idle4"
 sprite_frames = SubResource("SpriteFrames_lcr68")
 animation = &"idle1"
 
-[node name="mouths" type="AnimatedSprite2D" parent="."]
-sprite_frames = SubResource("SpriteFrames_0ihc2")
-animation = &"idle4"
-
 [node name="eyes" type="AnimatedSprite2D" parent="."]
 sprite_frames = SubResource("SpriteFrames_dx0db")
 animation = &"idle1"
+
+[node name="mouths" type="AnimatedSprite2D" parent="."]
+sprite_frames = SubResource("SpriteFrames_0ihc2")
+animation = &"idle4"
 
 [node name="FeedArea" type="Area2D" parent="." groups=["dropable"]]
 script = ExtResource("20_ed1bo")
@@ -765,6 +765,7 @@ shape = SubResource("CircleShape2D_wcdec")
 [node name="Hunger" type="Node" parent="."]
 script = ExtResource("20_d8kld")
 
+[connection signal="animation_finished" from="mouths" to="." method="_on_mouths_animation_finished"]
 [connection signal="body_entered" from="FeedArea" to="FeedArea" method="_on_body_entered"]
 [connection signal="input_event" from="FeedArea" to="." method="_on_feed_area_input_event"]
 [connection signal="mouse_entered" from="FeedArea" to="FeedArea" method="_on_mouse_entered"]
