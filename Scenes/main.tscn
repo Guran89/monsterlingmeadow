@@ -1,60 +1,29 @@
-[gd_scene load_steps=11 format=3 uid="uid://bqqjh8bexynur"]
+[gd_scene load_steps=9 format=3 uid="uid://bqqjh8bexynur"]
 
 [ext_resource type="Texture2D" uid="uid://ctrqgo4rmp6x4" path="res://Backgrounds/day.png" id="1_nf48f"]
 [ext_resource type="PackedScene" uid="uid://bcbf5j30mg5kx" path="res://Scenes/monsterling_new.tscn" id="2_c06ey"]
-[ext_resource type="Texture2D" uid="uid://cmlghs4sk8rfv" path="res://assets/UI/hungerempty.png" id="3_1pghd"]
-[ext_resource type="Script" path="res://Scenes/UI.gd" id="3_fnuf7"]
-[ext_resource type="Texture2D" uid="uid://r2njkb2ffao2" path="res://assets/UI/chickenskewer.png" id="4_nmbkt"]
-[ext_resource type="Texture2D" uid="uid://depva61mffbvc" path="res://assets/UI/rawchicken.png" id="5_bupr8"]
-[ext_resource type="Script" path="res://Scripts/object.gd" id="5_joggo"]
+[ext_resource type="Script" path="res://Scenes/background.gd" id="2_egmxs"]
 [ext_resource type="Texture2D" uid="uid://c1goxh1wjeqkr" path="res://assets/UI/foodicon.png" id="5_uy6j2"]
-[ext_resource type="Script" path="res://Scenes/FoodMenuButton.gd" id="8_1mnau"]
-
-[sub_resource type="RectangleShape2D" id="RectangleShape2D_1jmn1"]
-size = Vector2(47.3333, 47.3333)
+[ext_resource type="PackedScene" uid="uid://brmc65v1ncifu" path="res://Scenes/food_item_ui.tscn" id="6_4m0pa"]
+[ext_resource type="Script" path="res://Scripts/food_items.gd" id="7_35yl4"]
+[ext_resource type="Script" path="res://Scenes/Drag.gd" id="7_pde2k"]
+[ext_resource type="Script" path="res://Scripts/hunger_ui.gd" id="8_v1v28"]
 
 [node name="Main" type="Node2D"]
 
-[node name="Day" type="Sprite2D" parent="."]
+[node name="Background" type="Sprite2D" parent="."]
 position = Vector2(192, 424)
 scale = Vector2(2.89062, 2.99147)
 texture = ExtResource("1_nf48f")
+script = ExtResource("2_egmxs")
+
+[node name="Timer" type="Timer" parent="Background"]
 
 [node name="Monsterling" parent="." instance=ExtResource("2_c06ey")]
 position = Vector2(200, 568)
 scale = Vector2(2, 2)
 
 [node name="CanvasLayer" type="CanvasLayer" parent="."]
-script = ExtResource("3_fnuf7")
-
-[node name="FoodItems" type="VBoxContainer" parent="CanvasLayer"]
-offset_left = 24.0
-offset_top = 616.0
-offset_right = 71.0
-offset_bottom = 707.0
-scale = Vector2(1.5, 1.5)
-
-[node name="ChickenSkewer" type="TextureRect" parent="CanvasLayer/FoodItems"]
-layout_mode = 2
-texture = ExtResource("4_nmbkt")
-script = ExtResource("5_joggo")
-
-[node name="Area2D" type="Area2D" parent="CanvasLayer/FoodItems/ChickenSkewer"]
-position = Vector2(21.3333, 26.6667)
-
-[node name="CollisionShape2D" type="CollisionShape2D" parent="CanvasLayer/FoodItems/ChickenSkewer/Area2D"]
-shape = SubResource("RectangleShape2D_1jmn1")
-
-[node name="RawChicken" type="TextureRect" parent="CanvasLayer/FoodItems"]
-layout_mode = 2
-texture = ExtResource("5_bupr8")
-script = ExtResource("5_joggo")
-
-[node name="Area2D" type="Area2D" parent="CanvasLayer/FoodItems/RawChicken"]
-position = Vector2(21.3333, 20.6667)
-
-[node name="CollisionShape2D" type="CollisionShape2D" parent="CanvasLayer/FoodItems/RawChicken/Area2D"]
-shape = SubResource("RectangleShape2D_1jmn1")
 
 [node name="Hunger" type="HBoxContainer" parent="CanvasLayer"]
 offset_top = 56.0
@@ -62,38 +31,37 @@ offset_right = 83.0
 offset_bottom = 81.0
 scale = Vector2(2, 2)
 theme_override_constants/separation = 0
+script = ExtResource("8_v1v28")
 
-[node name="hunger1" type="TextureRect" parent="CanvasLayer/Hunger"]
+[node name="BottomMenu" type="HBoxContainer" parent="CanvasLayer"]
+anchors_preset = 2
+anchor_top = 1.0
+anchor_bottom = 1.0
+offset_top = -132.0
+offset_right = 42.0
+grow_vertical = 0
+
+[node name="FoodMenu" type="VBoxContainer" parent="CanvasLayer/BottomMenu"]
 layout_mode = 2
-texture = ExtResource("3_1pghd")
+alignment = 2
 
-[node name="hunger2" type="TextureRect" parent="CanvasLayer/Hunger"]
+[node name="FoodItems" type="VBoxContainer" parent="CanvasLayer/BottomMenu/FoodMenu"]
 layout_mode = 2
-texture = ExtResource("3_1pghd")
+script = ExtResource("7_35yl4")
 
-[node name="hunger3" type="TextureRect" parent="CanvasLayer/Hunger"]
+[node name="FoodItem" parent="CanvasLayer/BottomMenu/FoodMenu/FoodItems" instance=ExtResource("6_4m0pa")]
 layout_mode = 2
-texture = ExtResource("3_1pghd")
 
-[node name="Timer" type="Timer" parent="CanvasLayer"]
-wait_time = 5.0
-autostart = true
-
-[node name="Menu" type="HBoxContainer" parent="CanvasLayer"]
-offset_left = 16.0
-offset_top = 760.0
-offset_right = 58.0
-offset_bottom = 797.0
-scale = Vector2(2, 2)
-
-[node name="Button" type="Button" parent="CanvasLayer/Menu"]
+[node name="Toggle" type="Button" parent="CanvasLayer/BottomMenu/FoodMenu"]
 layout_mode = 2
 icon = ExtResource("5_uy6j2")
-script = ExtResource("8_1mnau")
 
-[connection signal="mouse_entered" from="CanvasLayer/FoodItems/ChickenSkewer/Area2D" to="CanvasLayer/FoodItems/ChickenSkewer" method="_on_area_2d_mouse_entered"]
-[connection signal="mouse_exited" from="CanvasLayer/FoodItems/ChickenSkewer/Area2D" to="CanvasLayer/FoodItems/ChickenSkewer" method="_on_area_2d_mouse_exited"]
-[connection signal="mouse_entered" from="CanvasLayer/FoodItems/RawChicken/Area2D" to="CanvasLayer/FoodItems/RawChicken" method="_on_area_2d_mouse_entered"]
-[connection signal="mouse_exited" from="CanvasLayer/FoodItems/RawChicken/Area2D" to="CanvasLayer/FoodItems/RawChicken" method="_on_area_2d_mouse_exited"]
-[connection signal="timeout" from="CanvasLayer/Timer" to="CanvasLayer" method="_on_timer_timeout"]
-[connection signal="pressed" from="CanvasLayer/Menu/Button" to="CanvasLayer" method="_on_button_pressed"]
+[node name="Drag" type="TextureRect" parent="."]
+offset_left = 85.0
+offset_top = 360.0
+offset_right = 125.0
+offset_bottom = 400.0
+script = ExtResource("7_pde2k")
+
+[connection signal="timeout" from="Background/Timer" to="Background" method="_on_timer_timeout"]
+[connection signal="pressed" from="CanvasLayer/BottomMenu/FoodMenu/Toggle" to="CanvasLayer/BottomMenu/FoodMenu/FoodItems" method="_on_toggle_pressed"]

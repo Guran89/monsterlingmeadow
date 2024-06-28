@@ -1,6 +1,5 @@
 extends CanvasLayer
 
-var hunger = Globals.hunger
 @onready var hunger_1: TextureRect = $Hunger/hunger1
 @onready var hunger_2: TextureRect = $Hunger/hunger2
 @onready var hunger_3: TextureRect = $Hunger/hunger3

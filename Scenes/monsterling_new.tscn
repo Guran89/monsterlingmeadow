@@ -1,4 +1,4 @@
-[gd_scene load_steps=111 format=3 uid="uid://bcbf5j30mg5kx"]
+[gd_scene load_steps=113 format=3 uid="uid://bcbf5j30mg5kx"]
 
 [ext_resource type="Script" path="res://Scripts/monsterling.gd" id="1_h0e5p"]
 [ext_resource type="Texture2D" uid="uid://cvmkd5a3r11vn" path="res://assets/torsos/torso1.png" id="2_kmdhv"]
@@ -19,6 +19,8 @@
 [ext_resource type="Texture2D" uid="uid://crsfyp4s654j" path="res://assets/eyes/eyes2_idle.png" id="17_o50mo"]
 [ext_resource type="Texture2D" uid="uid://dyjhltuuvwldc" path="res://assets/eyes/eyes3_idle.png" id="18_uye5g"]
 [ext_resource type="Texture2D" uid="uid://c74at6btiunhs" path="res://assets/eyes/eyes4_idle.png" id="19_ue6ls"]
+[ext_resource type="Script" path="res://Scripts/hunger.gd" id="20_d8kld"]
+[ext_resource type="Script" path="res://Scenes/feed_area.gd" id="20_ed1bo"]
 
 [sub_resource type="SpriteFrames" id="SpriteFrames_mh4co"]
 animations = [{
@@ -751,7 +753,15 @@ sprite_frames = SubResource("SpriteFrames_dx0db")
 animation = &"idle4"
 
 [node name="FeedArea" type="Area2D" parent="." groups=["dropable"]]
+script = ExtResource("20_ed1bo")
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="FeedArea"]
 position = Vector2(-3, 9)
 shape = SubResource("CircleShape2D_wcdec")
+
+[node name="Hunger" type="Node" parent="."]
+script = ExtResource("20_d8kld")
+
+[connection signal="input_event" from="FeedArea" to="." method="_on_feed_area_input_event"]
+[connection signal="mouse_entered" from="FeedArea" to="FeedArea" method="_on_mouse_entered"]
+[connection signal="mouse_exited" from="FeedArea" to="FeedArea" method="_on_mouse_exited"]
