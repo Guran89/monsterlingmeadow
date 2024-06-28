@@ -12,3 +12,4 @@ func _ready():
 
 func _on_food_item_dropped(food_item):
 	food_item.visible = true
+	food_item.reset_texture()

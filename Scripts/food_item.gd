@@ -1,5 +1,7 @@
 extends TextureRect
 
+const EMPTY = preload("res://Assets/UI/empty.png")
+
 var _food
 
 func set_food(food):
@@ -21,5 +23,13 @@ func _on_mouse_entered():
 
 func _on_gui_input(event):
 	if event is InputEventMouseButton and event.pressed:
-		Events.food_item_selected.emit(self)
-		visible = false
+		var mouse_pos = get_viewport().get_mouse_position()
+		var offset = global_position - mouse_pos
+		print("offset: ", offset)
+
+		Events.food_item_selected.emit(self, offset)
+		texture = EMPTY
+		#visible = false
+
+func reset_texture():
+	texture = _food.texture
