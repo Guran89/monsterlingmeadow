@@ -1,0 +1,68 @@
+[gd_resource type="Resource" load_steps=12 format=3 uid="uid://c061740brvl7u"]
+
+[ext_resource type="Texture2D" uid="uid://bylg7gsul8vi4" path="res://Assets/Monsterling/heads/head1_idle.png" id="1_pkppn"]
+[ext_resource type="Script" path="res://Scripts/Data/Monsterling/head.gd" id="2_spu4a"]
+[ext_resource type="Texture2D" uid="uid://cvdpcsbqkxlbm" path="res://Assets/Monsterling/heads/head1.png" id="3_1mae6"]
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_3ywm2"]
+atlas = ExtResource("1_pkppn")
+region = Rect2(0, 0, 128, 128)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_o41na"]
+atlas = ExtResource("1_pkppn")
+region = Rect2(128, 0, 128, 128)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_wib2c"]
+atlas = ExtResource("1_pkppn")
+region = Rect2(256, 0, 128, 128)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_stoeg"]
+atlas = ExtResource("1_pkppn")
+region = Rect2(384, 0, 128, 128)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_gqt23"]
+atlas = ExtResource("1_pkppn")
+region = Rect2(512, 0, 128, 128)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_jwto4"]
+atlas = ExtResource("1_pkppn")
+region = Rect2(640, 0, 128, 128)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_xttk8"]
+atlas = ExtResource("1_pkppn")
+region = Rect2(768, 0, 128, 128)
+
+[sub_resource type="SpriteFrames" id="SpriteFrames_5hsfi"]
+animations = [{
+"frames": [{
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_3ywm2")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_o41na")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_wib2c")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_stoeg")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_gqt23")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_jwto4")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_xttk8")
+}],
+"loop": true,
+"name": &"default",
+"speed": 5.0
+}]
+
+[resource]
+script = ExtResource("2_spu4a")
+idle_animation = SubResource("SpriteFrames_5hsfi")
+name = ""
+texture = ExtResource("3_1mae6")

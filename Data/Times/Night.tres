@@ -1,0 +1,11 @@
+[gd_resource type="Resource" load_steps=4 format=3 uid="uid://dtlywr0lm2hw3"]
+
+[ext_resource type="Script" path="res://Scripts/Data/time.gd" id="1_ci5l8"]
+[ext_resource type="Texture2D" uid="uid://lfhrdvap4205" path="res://Assets/Backgrounds/night.png" id="2_hry3d"]
+[ext_resource type="AudioStream" uid="uid://dku28vkjsarbj" path="res://Assets/Sounds/night_ambience.mp3" id="2_pbx71"]
+
+[resource]
+script = ExtResource("1_ci5l8")
+sound = ExtResource("2_pbx71")
+name = "Night"
+texture = ExtResource("2_hry3d")

@@ -1,0 +1,71 @@
+[gd_scene load_steps=10 format=3 uid="uid://bqqjh8bexynur"]
+
+[ext_resource type="Texture2D" uid="uid://ctrqgo4rmp6x4" path="res://Assets/Backgrounds/day.png" id="1_nf48f"]
+[ext_resource type="PackedScene" uid="uid://bcbf5j30mg5kx" path="res://Scenes/monsterling.tscn" id="2_c06ey"]
+[ext_resource type="Script" path="res://Scripts/background.gd" id="2_egmxs"]
+[ext_resource type="Texture2D" uid="uid://c1goxh1wjeqkr" path="res://Assets/UI/foodicon.png" id="5_uy6j2"]
+[ext_resource type="Script" path="res://Scripts/food_items.gd" id="7_35yl4"]
+[ext_resource type="Script" path="res://Scripts/drag.gd" id="7_pde2k"]
+[ext_resource type="Script" path="res://Scripts/hunger_ui.gd" id="8_v1v28"]
+[ext_resource type="Script" path="res://Scripts/music.gd" id="9_2aqky"]
+[ext_resource type="Script" path="res://Scripts/day_timer.gd" id="10_n5l6r"]
+
+[node name="Main" type="Node2D"]
+
+[node name="Background" type="Sprite2D" parent="."]
+position = Vector2(192, 424)
+scale = Vector2(2.89062, 2.99147)
+texture = ExtResource("1_nf48f")
+script = ExtResource("2_egmxs")
+
+[node name="Monsterling" parent="." instance=ExtResource("2_c06ey")]
+position = Vector2(200, 568)
+scale = Vector2(2, 2)
+
+[node name="CanvasLayer" type="CanvasLayer" parent="."]
+
+[node name="Hunger" type="HBoxContainer" parent="CanvasLayer"]
+offset_top = 56.0
+offset_right = 83.0
+offset_bottom = 81.0
+scale = Vector2(2, 2)
+mouse_filter = 2
+theme_override_constants/separation = 0
+script = ExtResource("8_v1v28")
+
+[node name="BottomMenu" type="HBoxContainer" parent="CanvasLayer"]
+anchors_preset = 2
+anchor_top = 1.0
+anchor_bottom = 1.0
+offset_top = -132.0
+offset_right = 42.0
+grow_vertical = 0
+
+[node name="FoodMenu" type="VBoxContainer" parent="CanvasLayer/BottomMenu"]
+layout_mode = 2
+alignment = 2
+
+[node name="FoodItems" type="VBoxContainer" parent="CanvasLayer/BottomMenu/FoodMenu"]
+layout_mode = 2
+script = ExtResource("7_35yl4")
+
+[node name="Toggle" type="Button" parent="CanvasLayer/BottomMenu/FoodMenu"]
+layout_mode = 2
+icon = ExtResource("5_uy6j2")
+
+[node name="Drag" type="TextureRect" parent="."]
+offset_left = 85.0
+offset_top = 360.0
+offset_right = 125.0
+offset_bottom = 400.0
+mouse_filter = 2
+script = ExtResource("7_pde2k")
+
+[node name="Music" type="AudioStreamPlayer" parent="."]
+script = ExtResource("9_2aqky")
+
+[node name="DayTimer" type="Timer" parent="."]
+script = ExtResource("10_n5l6r")
+
+[connection signal="pressed" from="CanvasLayer/BottomMenu/FoodMenu/Toggle" to="CanvasLayer/BottomMenu/FoodMenu/FoodItems" method="_on_toggle_pressed"]
+[connection signal="timeout" from="DayTimer" to="DayTimer" method="_on_timeout"]

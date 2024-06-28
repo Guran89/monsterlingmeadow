@@ -1,0 +1,9 @@
+[gd_resource type="Resource" load_steps=3 format=3 uid="uid://codb3r3322slc"]
+
+[ext_resource type="Script" path="res://Scripts/Data/Monsterling/torso.gd" id="1_pi7yq"]
+[ext_resource type="Texture2D" uid="uid://cvmkd5a3r11vn" path="res://Assets/Monsterling/torsos/torso1.png" id="2_y3gx2"]
+
+[resource]
+script = ExtResource("1_pi7yq")
+name = ""
+texture = ExtResource("2_y3gx2")
