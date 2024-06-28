@@ -3,15 +3,15 @@
 importer="texture"
 type="CompressedTexture2D"
 uid="uid://cd3vqvgnttl5m"
-path="res://.godot/imported/arms4_idle.png-205ac621bd69555066e97c9363791121.ctex"
+path="res://.godot/imported/arms4_idle.png-19290cfc9a8193380f4ea0ddc6282743.ctex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://Assets/Monsterling/arms/arms4_idle.png"
-dest_files=["res://.godot/imported/arms4_idle.png-205ac621bd69555066e97c9363791121.ctex"]
+source_file="res://assets/Monsterling/arms/arms4_idle.png"
+dest_files=["res://.godot/imported/arms4_idle.png-19290cfc9a8193380f4ea0ddc6282743.ctex"]
 
 [params]
 

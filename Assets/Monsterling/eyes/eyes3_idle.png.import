@@ -3,15 +3,15 @@
 importer="texture"
 type="CompressedTexture2D"
 uid="uid://dyjhltuuvwldc"
-path="res://.godot/imported/eyes3_idle.png-0972cf26656595eb911c5054c10c3f53.ctex"
+path="res://.godot/imported/eyes3_idle.png-62482c333d59f133e9f7b56f94b27758.ctex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://Assets/Monsterling/eyes/eyes3_idle.png"
-dest_files=["res://.godot/imported/eyes3_idle.png-0972cf26656595eb911c5054c10c3f53.ctex"]
+source_file="res://assets/Monsterling/eyes/eyes3_idle.png"
+dest_files=["res://.godot/imported/eyes3_idle.png-62482c333d59f133e9f7b56f94b27758.ctex"]
 
 [params]
 

@@ -45,5 +45,5 @@ func _on_food_item_dropped(food_item):
 		_hunger.change_hunger(food_item.get_food().nutrition)
 
 func _on_time_changed(time):
-	if time == Data.times.DAY:
+	if time == Data.times.DAY || time == Data.times.NIGHT:
 		_hunger.change_hunger(Constants.FOOD_LOSS_PER_DAY)
