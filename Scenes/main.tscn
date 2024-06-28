@@ -62,12 +62,22 @@ icon = ExtResource("5_uy6j2")
 icon_alignment = 1
 
 [node name="Drag" type="TextureRect" parent="."]
-offset_left = 85.0
-offset_top = 360.0
-offset_right = 125.0
-offset_bottom = 400.0
+custom_minimum_size = Vector2(50, 50)
+anchors_preset = 8
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+offset_left = -20.0
+offset_top = -20.0
+offset_right = 20.0
+offset_bottom = 20.0
+grow_horizontal = 2
+grow_vertical = 2
+size_flags_horizontal = 4
+size_flags_vertical = 4
 mouse_filter = 2
-stretch_mode = 2
+stretch_mode = 3
 script = ExtResource("7_pde2k")
 
 [node name="Ambience" type="AudioStreamPlayer" parent="."]

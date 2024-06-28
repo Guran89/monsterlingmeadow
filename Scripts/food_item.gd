@@ -25,7 +25,6 @@ func _on_gui_input(event):
 	if event is InputEventMouseButton and event.pressed:
 		var mouse_pos = get_viewport().get_mouse_position()
 		var offset = global_position - mouse_pos
-		print("offset: ", offset)
 
 		Events.food_item_selected.emit(self, offset)
 		texture = EMPTY
