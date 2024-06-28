@@ -1,0 +1,84 @@
+[gd_resource type="Resource" load_steps=14 format=3 uid="uid://r8h7cuwfn133"]
+
+[ext_resource type="Texture2D" uid="uid://bqaac36y80u3l" path="res://Assets/Monsterling/mouths/mouth4_eat.png" id="1_ewxh5"]
+[ext_resource type="Texture2D" uid="uid://nyiwyp0mk2rc" path="res://Assets/Monsterling/mouths/mouth4.png" id="2_s6g4v"]
+[ext_resource type="Script" path="res://Scripts/Data/Monsterling/mouth.gd" id="3_odvvw"]
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_0r84m"]
+atlas = ExtResource("1_ewxh5")
+region = Rect2(0, 0, 128, 128)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_7d10f"]
+atlas = ExtResource("1_ewxh5")
+region = Rect2(128, 0, 128, 128)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_kr83s"]
+atlas = ExtResource("1_ewxh5")
+region = Rect2(256, 0, 128, 128)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_s3k5g"]
+atlas = ExtResource("1_ewxh5")
+region = Rect2(384, 0, 128, 128)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_s4b3o"]
+atlas = ExtResource("1_ewxh5")
+region = Rect2(512, 0, 128, 128)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_h5c8g"]
+atlas = ExtResource("1_ewxh5")
+region = Rect2(640, 0, 128, 128)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_lf7ew"]
+atlas = ExtResource("1_ewxh5")
+region = Rect2(768, 0, 128, 128)
+
+[sub_resource type="SpriteFrames" id="SpriteFrames_b30xj"]
+animations = [{
+"frames": [{
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_0r84m")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_7d10f")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_kr83s")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_s3k5g")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_s4b3o")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_h5c8g")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_lf7ew")
+}],
+"loop": true,
+"name": &"default",
+"speed": 5.0
+}]
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_xcsxg"]
+atlas = ExtResource("2_s6g4v")
+region = Rect2(0, 0, 128, 128)
+
+[sub_resource type="SpriteFrames" id="SpriteFrames_4pl8w"]
+animations = [{
+"frames": [{
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_xcsxg")
+}],
+"loop": true,
+"name": &"default",
+"speed": 5.0
+}]
+
+[resource]
+script = ExtResource("3_odvvw")
+idle_animation = SubResource("SpriteFrames_4pl8w")
+eat_animation = SubResource("SpriteFrames_b30xj")
+name = ""
+texture = ExtResource("2_s6g4v")

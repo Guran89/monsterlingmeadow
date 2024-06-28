@@ -1,0 +1,25 @@
+[gd_resource type="Resource" load_steps=5 format=3 uid="uid://c32g35ucq8s0f"]
+
+[ext_resource type="Script" path="res://Scripts/Data/Monsterling/legs.gd" id="1_0bl11"]
+[ext_resource type="Texture2D" uid="uid://dvakufuofk07e" path="res://Assets/Monsterling/legs/legs2.png" id="2_v83gj"]
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_8r5nb"]
+atlas = ExtResource("2_v83gj")
+region = Rect2(0, 0, 128, 128)
+
+[sub_resource type="SpriteFrames" id="SpriteFrames_whbxw"]
+animations = [{
+"frames": [{
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_8r5nb")
+}],
+"loop": true,
+"name": &"default",
+"speed": 5.0
+}]
+
+[resource]
+script = ExtResource("1_0bl11")
+idle_animation = SubResource("SpriteFrames_whbxw")
+name = ""
+texture = ExtResource("2_v83gj")
