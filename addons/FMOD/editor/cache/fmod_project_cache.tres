@@ -1,3 +1,306 @@
-[gd_resource type="ProjectCache" format=3 uid="uid://cm3mn70gmyfdj"]
+[gd_resource type="ProjectCache" load_steps=24 format=3 uid="uid://cm3mn70gmyfdj"]
+
+[ext_resource type="EventAsset" uid="uid://bbdr6w3xky5o7" path="res://addons/FMOD/editor/resources/events/{6bb07a8a-a2dd-44aa-bd65-b623445098a1}.tres" id="1_28r21"]
+
+[sub_resource type="BankAsset" id="BankAsset_60dl4"]
+file_path = "res://addons/FMOD/Mobile/Master.bank"
+modified_time = 1719654108
+path = "bank:/Master"
+guid = "{db455dc9-59b3-4001-b55e-17711d4e5ad3}"
+name = "Master"
+
+[sub_resource type="BankAsset" id="BankAsset_3avth"]
+file_path = "res://addons/FMOD/Mobile/Master.strings.bank"
+modified_time = 1719654108
+path = "bank:/Master.strings"
+guid = "{43587d1d-28c8-0c43-3317-9d8fecbd5c4b}"
+name = "Master.strings"
+
+[sub_resource type="BankAsset" id="BankAsset_du3wp"]
+file_path = "res://addons/FMOD/Mobile/SFX.bank"
+modified_time = 1719654108
+path = "bank:/SFX"
+guid = "{cf9eee6d-6936-4e12-b1f0-691be105a3c1}"
+name = "SFX"
+
+[sub_resource type="BusAsset" id="BusAsset_wr8nj"]
+path = "bus:/Reverb"
+guid = "{c613b6e4-e640-4ffc-9da2-e187d70b5edb}"
+name = "Reverb"
+
+[sub_resource type="BusAsset" id="BusAsset_2p7qp"]
+path = "bus:/"
+guid = "{a0420ea5-c03a-48eb-b931-c2a4d3e5bbd0}"
+name = "Master"
+
+[sub_resource type="FMOD_STUDIO_PARAMETER_ID" id="FMOD_STUDIO_PARAMETER_ID_x7rbv"]
+data1 = 814349927
+data2 = 619406866
+
+[sub_resource type="FMOD_STUDIO_PARAMETER_DESCRIPTION" id="FMOD_STUDIO_PARAMETER_DESCRIPTION_5ghg1"]
+name = "Fade"
+id = SubResource("FMOD_STUDIO_PARAMETER_ID_x7rbv")
+maximum = 1.0
+guid = "{16d921f6-a246-4b81-9fbc-a09aaf4201ff}"
+
+[sub_resource type="ParameterAsset" id="ParameterAsset_xsysg"]
+parameter_description = SubResource("FMOD_STUDIO_PARAMETER_DESCRIPTION_5ghg1")
+path = "parameter:/Fade"
+guid = "{16d921f6-a246-4b81-9fbc-a09aaf4201ff}"
+name = "Fade"
+
+[sub_resource type="EventAsset" id="EventAsset_57co6"]
+min_distance = 1.0
+max_distance = 20.0
+parameters = {
+"{16d921f6-a246-4b81-9fbc-a09aaf4201ff}": SubResource("ParameterAsset_xsysg")
+}
+path = "event:/Music/main theme day V2"
+guid = "{27b67332-4cba-4c1a-9d1c-f40a26c86017}"
+name = "main theme day V2"
+
+[sub_resource type="FMOD_STUDIO_PARAMETER_ID" id="FMOD_STUDIO_PARAMETER_ID_w26ed"]
+data1 = 814349927
+data2 = 619406866
+
+[sub_resource type="FMOD_STUDIO_PARAMETER_DESCRIPTION" id="FMOD_STUDIO_PARAMETER_DESCRIPTION_2r2gp"]
+name = "Fade"
+id = SubResource("FMOD_STUDIO_PARAMETER_ID_w26ed")
+maximum = 1.0
+guid = "{16d921f6-a246-4b81-9fbc-a09aaf4201ff}"
+
+[sub_resource type="ParameterAsset" id="ParameterAsset_3jb20"]
+parameter_description = SubResource("FMOD_STUDIO_PARAMETER_DESCRIPTION_2r2gp")
+path = "parameter:/Fade"
+guid = "{16d921f6-a246-4b81-9fbc-a09aaf4201ff}"
+name = "Fade"
+
+[sub_resource type="EventAsset" id="EventAsset_v8kgn"]
+min_distance = 1.0
+max_distance = 20.0
+parameters = {
+"{16d921f6-a246-4b81-9fbc-a09aaf4201ff}": SubResource("ParameterAsset_3jb20")
+}
+path = "event:/Music/main theme night V1"
+guid = "{12177727-1323-40b3-b30a-52421c708f6e}"
+name = "main theme night V1"
+
+[sub_resource type="EventAsset" id="EventAsset_47lk7"]
+is_oneshot = true
+min_distance = 1.0
+max_distance = 20.0
+path = "event:/SFX/Monster/eat_blush"
+guid = "{6a7d4b0d-f7ae-4ea0-92cc-02b5b675fc13}"
+name = "eat_blush"
+
+[sub_resource type="EventAsset" id="EventAsset_cjnkr"]
+is_oneshot = true
+min_distance = 1.0
+max_distance = 20.0
+path = "event:/SFX/Monster/eat_eyesclosed"
+guid = "{bdd23c34-62f7-4113-ba5f-c30209a04013}"
+name = "eat_eyesclosed"
+
+[sub_resource type="EventAsset" id="EventAsset_4ol48"]
+is_oneshot = true
+min_distance = 1.0
+max_distance = 20.0
+path = "event:/SFX/Monster/eat_mouthopen"
+guid = "{84620e8e-6c43-4a73-ad07-d61a2f32525a}"
+name = "eat_mouthopen"
+
+[sub_resource type="EventAsset" id="EventAsset_eh36d"]
+is_oneshot = true
+min_distance = 1.0
+max_distance = 20.0
+path = "event:/SFX/Monster/eat_tongue"
+guid = "{82395089-c836-415d-be7d-affa434e6e08}"
+name = "eat_tongue"
+
+[sub_resource type="EventAsset" id="EventAsset_wrgj7"]
+is_oneshot = true
+min_distance = 1.0
+max_distance = 20.0
+path = "event:/SFX/Monster/idle_arms_scratch"
+guid = "{207efe3e-d540-4d64-82cd-a5259fcde9a0}"
+name = "idle_arms_scratch"
+
+[sub_resource type="EventAsset" id="EventAsset_nm27n"]
+is_oneshot = true
+min_distance = 1.0
+max_distance = 20.0
+path = "event:/SFX/Monster/idle_eyes_blink"
+guid = "{c4f8c403-e81f-4b14-b9e7-2603092288fb}"
+name = "idle_eyes_blink"
+
+[sub_resource type="EventAsset" id="EventAsset_ykfx5"]
+is_oneshot = true
+min_distance = 1.0
+max_distance = 20.0
+path = "event:/SFX/Monster/idle_head_ears_wiggle"
+guid = "{9a0d08ea-478a-4a5b-8f31-6a7b2f306f68}"
+name = "idle_head_ears_wiggle"
+
+[sub_resource type="EventAsset" id="EventAsset_vu6ok"]
+is_oneshot = true
+min_distance = 1.0
+max_distance = 20.0
+path = "event:/SFX/Monster/idle_mouth_breath"
+guid = "{be34c988-c738-4e11-9097-20cc0c00b8af}"
+name = "idle_mouth_breath"
+
+[sub_resource type="EventAsset" id="EventAsset_ccxhn"]
+is_oneshot = true
+min_distance = 1.0
+max_distance = 20.0
+path = "event:/test3"
+guid = "{7ae6064c-7bb0-476e-aeae-da72fdf596d4}"
+name = "test3"
 
 [resource]
+banks = {
+"{43587d1d-28c8-0c43-3317-9d8fecbd5c4b}": SubResource("BankAsset_3avth"),
+"{cf9eee6d-6936-4e12-b1f0-691be105a3c1}": SubResource("BankAsset_du3wp"),
+"{db455dc9-59b3-4001-b55e-17711d4e5ad3}": SubResource("BankAsset_60dl4")
+}
+events = {
+"{12177727-1323-40b3-b30a-52421c708f6e}": SubResource("EventAsset_v8kgn"),
+"{207efe3e-d540-4d64-82cd-a5259fcde9a0}": SubResource("EventAsset_wrgj7"),
+"{27b67332-4cba-4c1a-9d1c-f40a26c86017}": SubResource("EventAsset_57co6"),
+"{6a7d4b0d-f7ae-4ea0-92cc-02b5b675fc13}": SubResource("EventAsset_47lk7"),
+"{6bb07a8a-a2dd-44aa-bd65-b623445098a1}": ExtResource("1_28r21"),
+"{7ae6064c-7bb0-476e-aeae-da72fdf596d4}": SubResource("EventAsset_ccxhn"),
+"{82395089-c836-415d-be7d-affa434e6e08}": SubResource("EventAsset_eh36d"),
+"{84620e8e-6c43-4a73-ad07-d61a2f32525a}": SubResource("EventAsset_4ol48"),
+"{9a0d08ea-478a-4a5b-8f31-6a7b2f306f68}": SubResource("EventAsset_ykfx5"),
+"{bdd23c34-62f7-4113-ba5f-c30209a04013}": SubResource("EventAsset_cjnkr"),
+"{be34c988-c738-4e11-9097-20cc0c00b8af}": SubResource("EventAsset_vu6ok"),
+"{c4f8c403-e81f-4b14-b9e7-2603092288fb}": SubResource("EventAsset_nm27n")
+}
+busses = {
+"{a0420ea5-c03a-48eb-b931-c2a4d3e5bbd0}": SubResource("BusAsset_2p7qp"),
+"{c613b6e4-e640-4ffc-9da2-e187d70b5edb}": SubResource("BusAsset_wr8nj")
+}
+bank_tree = [{
+"children": [],
+"item_type": 3,
+"node_name": "Master",
+"path": "bank:/Master",
+"resource": SubResource("BankAsset_60dl4")
+}, {
+"children": [],
+"item_type": 3,
+"node_name": "Master.strings",
+"path": "bank:/Master.strings",
+"resource": SubResource("BankAsset_3avth")
+}, {
+"children": [],
+"item_type": 3,
+"node_name": "SFX",
+"path": "bank:/SFX",
+"resource": SubResource("BankAsset_du3wp")
+}]
+event_tree = [{
+"children": [{
+"children": [],
+"item_type": 1,
+"node_name": "main theme day V2",
+"path": "event:/Music/main theme day V2",
+"resource": SubResource("EventAsset_57co6")
+}, {
+"children": [],
+"item_type": 1,
+"node_name": "main theme night V1",
+"path": "event:/Music/main theme night V1",
+"resource": SubResource("EventAsset_v8kgn")
+}],
+"item_type": 7,
+"node_name": "Music",
+"path": "",
+"resource": null
+}, {
+"children": [{
+"children": [{
+"children": [],
+"item_type": 1,
+"node_name": "eat_blush",
+"path": "event:/SFX/Monster/eat_blush",
+"resource": SubResource("EventAsset_47lk7")
+}, {
+"children": [],
+"item_type": 1,
+"node_name": "eat_eyesclosed",
+"path": "event:/SFX/Monster/eat_eyesclosed",
+"resource": SubResource("EventAsset_cjnkr")
+}, {
+"children": [],
+"item_type": 1,
+"node_name": "eat_mouthopen",
+"path": "event:/SFX/Monster/eat_mouthopen",
+"resource": SubResource("EventAsset_4ol48")
+}, {
+"children": [],
+"item_type": 1,
+"node_name": "eat_tongue",
+"path": "event:/SFX/Monster/eat_tongue",
+"resource": SubResource("EventAsset_eh36d")
+}, {
+"children": [],
+"item_type": 1,
+"node_name": "idle_arms_scratch",
+"path": "event:/SFX/Monster/idle_arms_scratch",
+"resource": SubResource("EventAsset_wrgj7")
+}, {
+"children": [],
+"item_type": 1,
+"node_name": "idle_eyes_blink",
+"path": "event:/SFX/Monster/idle_eyes_blink",
+"resource": SubResource("EventAsset_nm27n")
+}, {
+"children": [],
+"item_type": 1,
+"node_name": "idle_head_ears_wiggle",
+"path": "event:/SFX/Monster/idle_head_ears_wiggle",
+"resource": SubResource("EventAsset_ykfx5")
+}, {
+"children": [],
+"item_type": 1,
+"node_name": "idle_mouth_breath",
+"path": "event:/SFX/Monster/idle_mouth_breath",
+"resource": SubResource("EventAsset_vu6ok")
+}],
+"item_type": 7,
+"node_name": "Monster",
+"path": "",
+"resource": null
+}],
+"item_type": 7,
+"node_name": "SFX",
+"path": "",
+"resource": null
+}, {
+"children": [],
+"item_type": 1,
+"node_name": "test1",
+"path": "event:/test1",
+"resource": ExtResource("1_28r21")
+}, {
+"children": [],
+"item_type": 1,
+"node_name": "test3",
+"path": "event:/test3",
+"resource": SubResource("EventAsset_ccxhn")
+}]
+bus_tree = [{
+"children": [{
+"children": [],
+"item_type": 4,
+"node_name": "Reverb",
+"path": "bus:/Reverb",
+"resource": SubResource("BusAsset_wr8nj")
+}],
+"item_type": 4,
+"node_name": "bus:",
+"path": "bus:/",
+"resource": SubResource("BusAsset_2p7qp")
+}]

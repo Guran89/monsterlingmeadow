@@ -1,15 +1,67 @@
-[gd_scene load_steps=11 format=3 uid="uid://bqqjh8bexynur"]
+[gd_scene load_steps=19 format=3 uid="uid://bqqjh8bexynur"]
 
 [ext_resource type="Script" path="res://Scripts/main.gd" id="1_mt56x"]
-[ext_resource type="Texture2D" uid="uid://ctrqgo4rmp6x4" path="res://assets/Backgrounds/day.png" id="1_nf48f"]
+[ext_resource type="Texture2D" uid="uid://ctrqgo4rmp6x4" path="res://Assets/Backgrounds/day.png" id="1_nf48f"]
 [ext_resource type="PackedScene" uid="uid://bcbf5j30mg5kx" path="res://Scenes/monsterling.tscn" id="2_c06ey"]
 [ext_resource type="Script" path="res://Scripts/background.gd" id="2_egmxs"]
-[ext_resource type="Texture2D" uid="uid://c1goxh1wjeqkr" path="res://assets/UI/foodicon.png" id="5_uy6j2"]
+[ext_resource type="Texture2D" uid="uid://c1goxh1wjeqkr" path="res://Assets/UI/foodicon.png" id="5_uy6j2"]
 [ext_resource type="Script" path="res://Scripts/food_items.gd" id="7_35yl4"]
 [ext_resource type="Script" path="res://Scripts/drag.gd" id="7_pde2k"]
 [ext_resource type="Script" path="res://Scripts/hunger_ui.gd" id="8_v1v28"]
 [ext_resource type="Script" path="res://Scripts/music.gd" id="9_2aqky"]
 [ext_resource type="Script" path="res://Scripts/day_timer.gd" id="10_n5l6r"]
+
+[sub_resource type="FMOD_STUDIO_PARAMETER_ID" id="FMOD_STUDIO_PARAMETER_ID_x7rbv"]
+data1 = 814349927
+data2 = 619406866
+
+[sub_resource type="FMOD_STUDIO_PARAMETER_DESCRIPTION" id="FMOD_STUDIO_PARAMETER_DESCRIPTION_5ghg1"]
+name = "Fade"
+id = SubResource("FMOD_STUDIO_PARAMETER_ID_x7rbv")
+maximum = 1.0
+guid = "{16d921f6-a246-4b81-9fbc-a09aaf4201ff}"
+
+[sub_resource type="ParameterAsset" id="ParameterAsset_xsysg"]
+parameter_description = SubResource("FMOD_STUDIO_PARAMETER_DESCRIPTION_5ghg1")
+path = "parameter:/Fade"
+guid = "{16d921f6-a246-4b81-9fbc-a09aaf4201ff}"
+name = "Fade"
+
+[sub_resource type="EventAsset" id="EventAsset_57co6"]
+min_distance = 1.0
+max_distance = 20.0
+parameters = {
+"{16d921f6-a246-4b81-9fbc-a09aaf4201ff}": SubResource("ParameterAsset_xsysg")
+}
+path = "event:/Music/main theme day V2"
+guid = "{27b67332-4cba-4c1a-9d1c-f40a26c86017}"
+name = "main theme day V2"
+
+[sub_resource type="FMOD_STUDIO_PARAMETER_ID" id="FMOD_STUDIO_PARAMETER_ID_w26ed"]
+data1 = 814349927
+data2 = 619406866
+
+[sub_resource type="FMOD_STUDIO_PARAMETER_DESCRIPTION" id="FMOD_STUDIO_PARAMETER_DESCRIPTION_2r2gp"]
+name = "Fade"
+id = SubResource("FMOD_STUDIO_PARAMETER_ID_w26ed")
+maximum = 1.0
+guid = "{16d921f6-a246-4b81-9fbc-a09aaf4201ff}"
+
+[sub_resource type="ParameterAsset" id="ParameterAsset_3jb20"]
+parameter_description = SubResource("FMOD_STUDIO_PARAMETER_DESCRIPTION_2r2gp")
+path = "parameter:/Fade"
+guid = "{16d921f6-a246-4b81-9fbc-a09aaf4201ff}"
+name = "Fade"
+
+[sub_resource type="EventAsset" id="EventAsset_v8kgn"]
+min_distance = 1.0
+max_distance = 20.0
+parameters = {
+"{16d921f6-a246-4b81-9fbc-a09aaf4201ff}": SubResource("ParameterAsset_3jb20")
+}
+path = "event:/Music/main theme night V1"
+guid = "{12177727-1323-40b3-b30a-52421c708f6e}"
+name = "main theme night V1"
 
 [node name="Main" type="Node2D"]
 script = ExtResource("1_mt56x")
@@ -19,6 +71,8 @@ position = Vector2(192, 424)
 scale = Vector2(2.89062, 2.99147)
 texture = ExtResource("1_nf48f")
 script = ExtResource("2_egmxs")
+dayMusic = SubResource("EventAsset_57co6")
+nightMusic = SubResource("EventAsset_v8kgn")
 
 [node name="Monsterling" parent="." instance=ExtResource("2_c06ey")]
 position = Vector2(200, 568)

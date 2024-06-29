@@ -1,0 +1,27 @@
+[gd_resource type="EventAsset" load_steps=4 format=3 uid="uid://b65vtma47657g"]
+
+[sub_resource type="FMOD_STUDIO_PARAMETER_ID" id="FMOD_STUDIO_PARAMETER_ID_x7rbv"]
+data1 = 814349927
+data2 = 619406866
+
+[sub_resource type="FMOD_STUDIO_PARAMETER_DESCRIPTION" id="FMOD_STUDIO_PARAMETER_DESCRIPTION_5ghg1"]
+name = "Fade"
+id = SubResource("FMOD_STUDIO_PARAMETER_ID_x7rbv")
+maximum = 1.0
+guid = "{16d921f6-a246-4b81-9fbc-a09aaf4201ff}"
+
+[sub_resource type="ParameterAsset" id="ParameterAsset_xsysg"]
+parameter_description = SubResource("FMOD_STUDIO_PARAMETER_DESCRIPTION_5ghg1")
+path = "parameter:/Fade"
+guid = "{16d921f6-a246-4b81-9fbc-a09aaf4201ff}"
+name = "Fade"
+
+[resource]
+min_distance = 1.0
+max_distance = 20.0
+parameters = {
+"{16d921f6-a246-4b81-9fbc-a09aaf4201ff}": SubResource("ParameterAsset_xsysg")
+}
+path = "event:/Music/main theme day V2"
+guid = "{27b67332-4cba-4c1a-9d1c-f40a26c86017}"
+name = "main theme day V2"

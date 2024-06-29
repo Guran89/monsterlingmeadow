@@ -52,6 +52,8 @@ func _on_food_item_dropped(food_item):
 		_hunger.change_hunger(food_item.get_food().nutrition)
 		mouth_sprite.sprite_frames = _mouth.eat_animation
 		mouth_sprite.play()
+		
+		FMODRuntime.play_one_shot_path("event:/SFX/Monster/eat_mouthopen")
 
 func _on_time_changed(time):
 	if time == Data.times.DAY || time == Data.times.NIGHT:
