@@ -1,6 +1,6 @@
 extends Timer
 
-var _time = 0
+var _time = 1
 var _max_time = Data.times.size()
 
 func _ready():

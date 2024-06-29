@@ -38,7 +38,7 @@ func _ready():
 func get_random(array):
 	return array[randi() % array.size()]
 
-func _on_feed_area_input_event(viewport, event, shape_idx):
+func _on_feed_area_input_event(_viewport, event, _shape_idx):
 	if event is InputEventMouseButton and event.pressed:
 		print("Monster clicked")
 
@@ -47,17 +47,12 @@ func _on_food_item_dropped(food_item):
 		_hunger.change_hunger(food_item.get_food().nutrition)
 		mouth_sprite.sprite_frames = _mouth.eat_animation
 		mouth_sprite.play()
-		animation_timer.start()
 
 func _on_time_changed(time):
 	if time == Data.times.DAY || time == Data.times.NIGHT:
 		_hunger.change_hunger(Constants.FOOD_LOSS_PER_DAY)
 
 
-func _on_timer_timeout():
+func _on_mouths_animation_finished():
 	mouth_sprite.sprite_frames = _mouth.idle_animation
 	mouth_sprite.play()
-
-
-func _on_mouths_animation_finished():
-	print("finished")

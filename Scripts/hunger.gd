@@ -11,4 +11,4 @@ func change_hunger(change):
 	print("hunger changed: ", hunger)
 
 func _on_game_ready():
-	change_hunger(Constants.MAX_HUNGER)
+	change_hunger(Constants.MIN_HUNGER)
