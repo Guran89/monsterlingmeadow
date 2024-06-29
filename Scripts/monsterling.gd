@@ -2,7 +2,6 @@ extends Node2D
 
 @onready var _feed_area = $FeedArea
 @onready var _hunger = $Hunger
-@onready var eat_timer = $mouths/EatTimer
 
 # References to the AnimatedSprite2D nodes
 @onready var arm_sprite = $arms
@@ -44,7 +43,7 @@ func _ready():
 func get_random(array):
 	return array[randi() % array.size()]
 
-func _on_feed_area_input_event(viewport, event, shape_idx):
+func _on_feed_area_input_event(_viewport, event, _shape_idx):
 	if event is InputEventMouseButton and event.pressed:
 		print("Monster clicked")
 

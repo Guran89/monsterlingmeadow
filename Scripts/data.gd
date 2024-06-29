@@ -14,7 +14,7 @@ var torsos = loadCategory("Torsos")
 func loadCategory(category):
 	return loadDirectory(DATA_PATH + category + "/", category)
 
-func loadDirectory(path, directory = ""):
+func loadDirectory(path, _directory = ""):
 	var data = {}
 	var dir = DirAccess.open(path)
 	if dir:
