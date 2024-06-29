@@ -37,7 +37,7 @@ func loadDirectory(path, _directory = ""):
 				data.merge(subDirectory) # not recursive
 				continue
 
-			print("loading ", resourcePath)
+			#print("loading ", resourcePath)
 			var resource = load(resourcePath)
 			fileName = fileName.to_upper()
 			data[fileName] = resource

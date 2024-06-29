@@ -11,8 +11,6 @@ extends Node2D
 @onready var mouth_sprite = $mouths
 @onready var torso_sprite = $torsos
 
-@onready var animation_timer = $AnimationTimer
-
 @onready var _torso = get_random(Data.torsos.values())
 @onready var _head = get_random(Data.heads.values())
 @onready var _arms = get_random(Data.arms.values())
