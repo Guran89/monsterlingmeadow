@@ -3,15 +3,15 @@
 importer="texture"
 type="CompressedTexture2D"
 uid="uid://bs72accsj2v23"
-path="res://.godot/imported/arms2.png-60accfe543269210f2881ede9fef2bc1.ctex"
+path="res://.godot/imported/arms2.png-298dd61697725d99f895d84ccf02eaaf.ctex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://assets/Monsterling/arms/arms2.png"
-dest_files=["res://.godot/imported/arms2.png-60accfe543269210f2881ede9fef2bc1.ctex"]
+source_file="res://Assets/Monsterling/arms/arms2.png"
+dest_files=["res://.godot/imported/arms2.png-298dd61697725d99f895d84ccf02eaaf.ctex"]
 
 [params]
 
