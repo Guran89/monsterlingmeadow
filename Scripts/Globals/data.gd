@@ -10,6 +10,7 @@ var heads = loadCategory("Heads")
 var legs = loadCategory("Legs")
 var mouths = loadCategory("Mouths")
 var torsos = loadCategory("Torsos")
+var icons = loadCategory("Icons")
 
 func loadCategory(category):
 	return loadDirectory(DATA_PATH + category + "/", category)
@@ -27,6 +28,8 @@ func loadDirectory(path, directory = ""):
 			if file.begins_with("."):
 				continue
 
+			if '.tres.remap' in file:
+				file = file.trim_suffix('.remap')
 			var resourcePath = path + file
 			var fileName = file.get_slice(".", 0)
 			if dir.current_is_dir():
@@ -34,6 +37,7 @@ func loadDirectory(path, directory = ""):
 				data.merge(subDirectory) # not recursive
 				continue
 
+			print("loading ", resourcePath)
 			var resource = load(resourcePath)
 			fileName = fileName.to_upper()
 			data[fileName] = resource

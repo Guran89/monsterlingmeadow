@@ -19,7 +19,7 @@ config/icon="res://icon.svg"
 
 Events="*res://Scripts/Globals/events.gd"
 Constants="*res://Scripts/Globals/constants.gd"
-Data="*res://Scripts/data.gd"
+Data="*res://Scripts/Globals/data.gd"
 
 [display]
 

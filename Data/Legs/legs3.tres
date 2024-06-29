@@ -1,7 +1,7 @@
 [gd_resource type="Resource" load_steps=5 format=3 uid="uid://p7liu2koqnfl"]
 
 [ext_resource type="Script" path="res://Scripts/Data/Monsterling/legs.gd" id="1_yfuwu"]
-[ext_resource type="Texture2D" uid="uid://d2bdkdv1xb5rc" path="res://Assets/Monsterling/legs/legs3.png" id="2_b2a4h"]
+[ext_resource type="Texture2D" uid="uid://d2bdkdv1xb5rc" path="res://assets/Monsterling/legs/legs3.png" id="2_b2a4h"]
 
 [sub_resource type="AtlasTexture" id="AtlasTexture_odual"]
 atlas = ExtResource("2_b2a4h")

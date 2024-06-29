@@ -1,7 +1,7 @@
 [gd_resource type="Resource" load_steps=14 format=3 uid="uid://b53o78pbuf2wa"]
 
-[ext_resource type="Texture2D" uid="uid://bqjvetq7rfldf" path="res://Assets/Monsterling/mouths/mouth2_eat.png" id="1_swtdn"]
-[ext_resource type="Texture2D" uid="uid://bkr2c5v36m41b" path="res://Assets/Monsterling/mouths/mouth2.png" id="2_gh5gg"]
+[ext_resource type="Texture2D" uid="uid://bqjvetq7rfldf" path="res://assets/Monsterling/mouths/mouth2_eat.png" id="1_swtdn"]
+[ext_resource type="Texture2D" uid="uid://bkr2c5v36m41b" path="res://assets/Monsterling/mouths/mouth2.png" id="2_gh5gg"]
 [ext_resource type="Script" path="res://Scripts/Data/Monsterling/mouth.gd" id="3_jienf"]
 
 [sub_resource type="AtlasTexture" id="AtlasTexture_e1cwp"]
@@ -56,7 +56,7 @@ animations = [{
 "duration": 1.0,
 "texture": SubResource("AtlasTexture_qw33n")
 }],
-"loop": true,
+"loop": false,
 "name": &"default",
 "speed": 5.0
 }]
