@@ -11,6 +11,9 @@ extends Node2D
 @onready var mouth_sprite = $mouths
 @onready var torso_sprite = $torsos
 
+@export var resource: DialogueResource
+@export var dialogueStart: String
+
 var _torso
 var _head
 var _arms
@@ -63,3 +66,9 @@ func _on_time_changed(time):
 func _on_mouths_animation_finished():
 	mouth_sprite.sprite_frames = _mouth.idle_animation
 	mouth_sprite.play()
+
+func _unhandled_input(_event):
+	if Input.is_action_just_pressed("Space"):
+		print("Start dialogue")
+		var _dialogue_line = await DialogueManager.get_next_dialogue_line(resource, dialogueStart)
+		DialogueManager.show_dialogue_balloon_scene("res://Scenes/balloon.tscn", resource)
