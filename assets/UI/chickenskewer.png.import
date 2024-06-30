@@ -3,15 +3,15 @@
 importer="texture"
 type="CompressedTexture2D"
 uid="uid://r2njkb2ffao2"
-path="res://.godot/imported/chickenskewer.png-5ca3ce81adc52ee6509c4070e05031a2.ctex"
+path="res://.godot/imported/chickenskewer.png-eda64e90e6840d4a2cb5c7863f81a744.ctex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://Assets/UI/chickenskewer.png"
-dest_files=["res://.godot/imported/chickenskewer.png-5ca3ce81adc52ee6509c4070e05031a2.ctex"]
+source_file="res://assets/UI/chickenskewer.png"
+dest_files=["res://.godot/imported/chickenskewer.png-eda64e90e6840d4a2cb5c7863f81a744.ctex"]
 
 [params]
 

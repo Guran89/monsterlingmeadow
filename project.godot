@@ -23,10 +23,6 @@ Data="*res://Scripts/data.gd"
 FMODRuntime="*res://addons/FMOD/runtime/fmod_runtime_manager.gd"
 DialogueManager="*res://addons/dialogue_manager/dialogue_manager.gd"
 
-[dialogue_manager]
-
-general/balloon_path="res://Scenes/balloon.tscn"
-
 [display]
 
 window/size/viewport_width=393

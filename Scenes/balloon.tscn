@@ -1,6 +1,6 @@
 [gd_scene load_steps=10 format=3 uid="uid://13s5spsk34qu"]
 
-[ext_resource type="Script" path="res://Dialogues/balloon.gd" id="1_s2gbs"]
+[ext_resource type="Script" path="res://Scripts/balloon.gd" id="1_s2gbs"]
 [ext_resource type="PackedScene" uid="uid://ckvgyvclnwggo" path="res://addons/dialogue_manager/dialogue_label.tscn" id="2_hfvdi"]
 [ext_resource type="Script" path="res://addons/dialogue_manager/dialogue_reponses_menu.gd" id="3_1j1j0"]
 
@@ -79,6 +79,7 @@ corner_radius_bottom_left = 3
 
 [sub_resource type="Theme" id="Theme_qq3yp"]
 default_font_size = 8
+Button/font_sizes/font_size = 21
 Button/styles/disabled = SubResource("StyleBoxFlat_235ry")
 Button/styles/focus = SubResource("StyleBoxFlat_ufjut")
 Button/styles/hover = SubResource("StyleBoxFlat_fcbqo")
