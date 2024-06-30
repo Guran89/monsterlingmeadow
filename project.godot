@@ -21,6 +21,7 @@ Events="*res://Scripts/Globals/events.gd"
 Constants="*res://Scripts/Globals/constants.gd"
 Data="*res://Scripts/data.gd"
 FMODRuntime="*res://addons/FMOD/runtime/fmod_runtime_manager.gd"
+DialogueManager="*res://addons/dialogue_manager/dialogue_manager.gd"
 
 [display]
 
@@ -34,7 +35,7 @@ project/assembly_name="MonsterlingMeadow-test"
 
 [editor_plugins]
 
-enabled=PackedStringArray("res://addons/FMOD/plugin.cfg")
+enabled=PackedStringArray("res://addons/FMOD/plugin.cfg", "res://addons/dialogue_manager/plugin.cfg")
 
 [filesystem]
 
