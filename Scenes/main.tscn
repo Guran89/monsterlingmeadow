@@ -1,11 +1,11 @@
 [gd_scene load_steps=12 format=3 uid="uid://bqqjh8bexynur"]
 
 [ext_resource type="Script" path="res://Scripts/main.gd" id="1_mt56x"]
-[ext_resource type="Texture2D" uid="uid://ctrqgo4rmp6x4" path="res://assets/Backgrounds/day.png" id="1_nf48f"]
+[ext_resource type="Texture2D" uid="uid://ctrqgo4rmp6x4" path="res://Assets/Backgrounds/day.png" id="1_nf48f"]
 [ext_resource type="PackedScene" uid="uid://bcbf5j30mg5kx" path="res://Scenes/monsterling.tscn" id="2_c06ey"]
 [ext_resource type="Script" path="res://Scripts/background.gd" id="2_egmxs"]
 [ext_resource type="Resource" uid="uid://bfggdhl7gb8ld" path="res://Dialogues/ExampleDialogue.dialogue" id="5_ohjq5"]
-[ext_resource type="Texture2D" uid="uid://c1goxh1wjeqkr" path="res://assets/UI/foodicon.png" id="5_uy6j2"]
+[ext_resource type="Texture2D" uid="uid://c1goxh1wjeqkr" path="res://Assets/UI/foodicon.png" id="5_uy6j2"]
 [ext_resource type="Script" path="res://Scripts/food_items.gd" id="7_35yl4"]
 [ext_resource type="Script" path="res://Scripts/drag.gd" id="7_pde2k"]
 [ext_resource type="Script" path="res://Scripts/hunger_ui.gd" id="8_v1v28"]

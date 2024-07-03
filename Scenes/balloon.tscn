@@ -1,6 +1,7 @@
-[gd_scene load_steps=10 format=3 uid="uid://13s5spsk34qu"]
+[gd_scene load_steps=11 format=3 uid="uid://13s5spsk34qu"]
 
 [ext_resource type="Script" path="res://Scripts/balloon.gd" id="1_s2gbs"]
+[ext_resource type="EventAsset" uid="uid://ddj3usreirkbd" path="res://addons/FMOD/editor/resources/events/{c4f8c403-e81f-4b14-b9e7-2603092288fb}.tres" id="2_dei03"]
 [ext_resource type="PackedScene" uid="uid://ckvgyvclnwggo" path="res://addons/dialogue_manager/dialogue_label.tscn" id="2_hfvdi"]
 [ext_resource type="Script" path="res://addons/dialogue_manager/dialogue_reponses_menu.gd" id="3_1j1j0"]
 
@@ -93,6 +94,7 @@ Panel/styles/panel = SubResource("StyleBoxFlat_uy0d5")
 [node name="ExampleBalloon" type="CanvasLayer"]
 layer = 100
 script = ExtResource("1_s2gbs")
+event = ExtResource("2_dei03")
 
 [node name="Balloon" type="Control" parent="."]
 unique_name_in_owner = true
@@ -172,4 +174,5 @@ theme_override_font_sizes/font_size = 21
 text = "Response Example"
 
 [connection signal="gui_input" from="Balloon" to="." method="_on_balloon_gui_input"]
+[connection signal="spoke" from="Balloon/Panel/Dialogue/VBoxContainer/DialogueLabel" to="." method="_on_dialogue_label_spoke"]
 [connection signal="response_selected" from="Balloon/Responses/ResponsesMenu" to="." method="_on_responses_menu_response_selected"]
