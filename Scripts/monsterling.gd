@@ -62,6 +62,10 @@ func _on_food_item_dropped(food_item):
 		mouth_sprite.sprite_frames = _mouth.eat_animation
 		mouth_sprite.play()
 		
+		if _mouth.name == "mouth1":
+			pass
+			#ALEX KOD HÄR
+		
 		FMODRuntime.play_one_shot_path("event:/SFX/Monster/eat_mouthopen")
 
 func _on_time_changed(time):
@@ -85,7 +89,6 @@ func _on_eye_timer_timeout():
 	eye_sprite.play()
 	var timer_wait_time = randi_range(3, 5)
 	eye_timer.wait_time = timer_wait_time
-	print(eye_timer.wait_time)
 
 
 func _on_head_timer_timeout():
