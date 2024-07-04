@@ -1,22 +1,6 @@
 extends Node2D
 
-@onready var _feed_area = $FeedArea
-@onready var _hunger = $Hunger
-
-# References to the AnimatedSprite2D nodes
-@onready var arm_sprite = $arms
-@onready var head_sprite = $heads
-@onready var leg_sprite = $legs
-@onready var eye_sprite = $eyes
-@onready var mouth_sprite = $mouths
-@onready var torso_sprite = $torsos
-
-# Timers for animations
-@onready var head_timer = $heads/HeadTimer
-@onready var arm_timer = $arms/ArmTimer
-@onready var eye_timer = $eyes/EyeTimer
-
-
+@export_category("Dialogue Settings")
 @export var resource: DialogueResource
 @export var dialogueStart: String
 
@@ -38,6 +22,23 @@ var _arms
 var _legs
 var _mouth
 var _eyes
+
+@onready var _feed_area = $FeedArea
+@onready var _hunger = $Hunger
+
+# References to the AnimatedSprite2D nodes
+@onready var arm_sprite = $arms
+@onready var head_sprite = $heads
+@onready var leg_sprite = $legs
+@onready var eye_sprite = $eyes
+@onready var mouth_sprite = $mouths
+@onready var torso_sprite = $torsos
+
+# Timers for animations
+@onready var head_timer = $heads/HeadTimer
+@onready var arm_timer = $arms/ArmTimer
+@onready var eye_timer = $eyes/EyeTimer
+
 
 func _ready():
 	Events.food_item_dropped.connect(_on_food_item_dropped)
@@ -64,9 +65,11 @@ func _ready():
 func get_random(array):
 	return array[randi() % array.size()]
 
+
 func _on_feed_area_input_event(_viewport, event, _shape_idx):
 	if event is InputEventMouseButton and event.pressed:
 		print("Monster clicked")
+
 
 func _on_food_item_dropped(food_item):
 	if _feed_area.hover():
@@ -76,10 +79,13 @@ func _on_food_item_dropped(food_item):
 		
 		if _mouth.name == "mouth1":
 			FMODRuntime.play_one_shot_path("event:/SFX/Monster/eat_tongue")
+			
 		if _mouth.name == "mouth2":
 			FMODRuntime.play_one_shot_path("event:/SFX/Monster/eat_mouthopen")
+			
 		if _mouth.name == "mouth3":
 			FMODRuntime.play_one_shot_path("event:/SFX/Monster/eat_blush")
+			
 		if _mouth.name == "mouth4":
 			FMODRuntime.play_one_shot_path("event:/SFX/Monster/eat_eyesclosed")
 
@@ -91,6 +97,7 @@ func _on_time_changed(time):
 func _on_mouths_animation_finished():
 	mouth_sprite.sprite_frames = _mouth.idle_animation
 	mouth_sprite.play()
+
 
 func _unhandled_input(_event):
 	if Input.is_action_just_pressed("Space"):
