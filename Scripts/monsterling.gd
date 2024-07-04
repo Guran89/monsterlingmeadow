@@ -63,10 +63,13 @@ func _on_food_item_dropped(food_item):
 		mouth_sprite.play()
 		
 		if _mouth.name == "mouth1":
-			pass
-			#ALEX KOD HÄR
-		
-		FMODRuntime.play_one_shot_path("event:/SFX/Monster/eat_mouthopen")
+			FMODRuntime.play_one_shot_path("event:/SFX/Monster/eat_tongue")
+		if _mouth.name == "mouth2":
+			FMODRuntime.play_one_shot_path("event:/SFX/Monster/eat_mouthopen")
+		if _mouth.name == "mouth3":
+			FMODRuntime.play_one_shot_path("event:/SFX/Monster/eat_blush")
+		if _mouth.name == "mouth4":
+			FMODRuntime.play_one_shot_path("event:/SFX/Monster/eat_eyesclosed")
 
 func _on_time_changed(time):
 	if time == Data.times.DAY || time == Data.times.NIGHT:
@@ -87,17 +90,22 @@ func _unhandled_input(_event):
 func _on_eye_timer_timeout():
 	randomize()
 	eye_sprite.play()
+	FMODRuntime.play_one_shot_path("event:/SFX/Monster/idle_eyes_blink")
 	var timer_wait_time = randi_range(3, 5)
 	eye_timer.wait_time = timer_wait_time
 
 
 func _on_head_timer_timeout():
+	randomize()
 	head_sprite.play()
+	FMODRuntime.play_one_shot_path("event:/SFX/Monster/idle_head_ears_wiggle")
 	var timer_wait_time = randi_range(2, 5)
 	head_timer.wait_time = timer_wait_time
 
 
 func _on_arm_timer_timeout():
+	randomize()
 	arm_sprite.play()
+	FMODRuntime.play_one_shot_path("event:/SFX/Monster/idle_arms_scratch")
 	var timer_wait_time = randi_range(3, 8)
 	arm_timer.wait_time = timer_wait_time
