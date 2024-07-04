@@ -1,13 +1,36 @@
-~ start
+~ the_crystal_egg
+I found this weird crystal looking rock while I was out.
+It kind of looks like egg, don’t you think?
+What should we do with it? 
 
-Nathan: [[Hi|Hello|Howdy]], this is some dialogue.
-Nathan: Here are some choices.
-- First one
-	Nathan: You picked the first one.
-- Second one
-	Nathan: You picked the second one.
-- Start again => start
-- End the conversation => END
-Nathan: For more information see the online documentation.
+- Let's try to hatch it! => hatch_egg
+- We could crack it open? => open_egg
+- Where did you find it?
+	Just outside a large cave south of here.
+	It looked like it had rolled out from the cave.
+	- I think we better return it.
+		Awww... Do we have to?
+		- Yes. That's for the best. => return_egg
+		- On second thought, no. Keep it.
+			Really? Yay!
+			- We should try and hatch it instead. => hatch_egg
+			- I say we crack it open right now. => open_egg
+	- Wanna crack it open? => open_egg
+	- I say we hatch it. => hatch_egg
 
+~ open_egg
+Let's do this!
+What's inside? What's inside?
+Wait, what is this!?
+Ewww! It's some kind of black goo! And it stinks!
+Make it go awaaaaayyyy!
+=> END
+~ hatch_egg
+Oooh, that's exciting!
+Let's put it someplace warm and cozy.
+And now we wait.
+=> END
+
+~ return_egg
+You're right... I'll return it right away.
 => END

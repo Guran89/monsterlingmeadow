@@ -25,7 +25,7 @@ script = ExtResource("2_egmxs")
 position = Vector2(200, 568)
 scale = Vector2(2, 2)
 resource = ExtResource("5_ohjq5")
-dialogueStart = "start"
+dialogueStart = "the_crystal_egg"
 
 [node name="CanvasLayer" type="CanvasLayer" parent="."]
 
