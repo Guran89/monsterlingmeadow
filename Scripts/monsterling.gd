@@ -20,6 +20,18 @@ extends Node2D
 @export var resource: DialogueResource
 @export var dialogueStart: String
 
+@export_category("Head Animation Timer")
+@export_range(1, 20) var head_timer_max: int = 5
+@export_range(1, 20) var head_timer_min: int = 3
+
+@export_category("Eyes Animation Timer")
+@export_range(1, 20) var eyes_timer_max: int = 5
+@export_range(1, 20) var eyes_timer_min: int = 2
+
+@export_category("Arms Animation Timer")
+@export_range(1, 20) var arms_timer_max: int = 8
+@export_range(1, 20) var arms_timer_min: int = 3
+
 var _torso
 var _head
 var _arms
@@ -88,24 +100,21 @@ func _unhandled_input(_event):
 
 
 func _on_eye_timer_timeout():
-	randomize()
 	eye_sprite.play()
 	FMODRuntime.play_one_shot_path("event:/SFX/Monster/idle_eyes_blink")
-	var timer_wait_time = randi_range(3, 5)
+	var timer_wait_time = randi_range(eyes_timer_min, eyes_timer_max)
 	eye_timer.wait_time = timer_wait_time
 
 
 func _on_head_timer_timeout():
-	randomize()
 	head_sprite.play()
 	FMODRuntime.play_one_shot_path("event:/SFX/Monster/idle_head_ears_wiggle")
-	var timer_wait_time = randi_range(2, 5)
+	var timer_wait_time = randi_range(head_timer_min, head_timer_max)
 	head_timer.wait_time = timer_wait_time
 
 
 func _on_arm_timer_timeout():
-	randomize()
 	arm_sprite.play()
 	FMODRuntime.play_one_shot_path("event:/SFX/Monster/idle_arms_scratch")
-	var timer_wait_time = randi_range(3, 8)
+	var timer_wait_time = randi_range(arms_timer_min, arms_timer_max)
 	arm_timer.wait_time = timer_wait_time
