@@ -740,7 +740,6 @@ sprite_frames = SubResource("SpriteFrames_fxtkb")
 animation = &"idle1"
 
 [node name="HeadTimer" type="Timer" parent="heads"]
-wait_time = 3.0
 autostart = true
 
 [node name="arms" type="AnimatedSprite2D" parent="."]
@@ -748,7 +747,6 @@ sprite_frames = SubResource("SpriteFrames_ctv6e")
 animation = &"idle4"
 
 [node name="ArmTimer" type="Timer" parent="arms"]
-wait_time = 5.0
 autostart = true
 
 [node name="legs" type="AnimatedSprite2D" parent="."]
