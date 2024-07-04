@@ -1,6 +1,6 @@
 extends TextureRect
 
-const EMPTY = preload("res://Assets/UI/empty.png")
+var EMPTY = load("res://assets/UI/empty.png")
 
 var _food
 

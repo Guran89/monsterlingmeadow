@@ -1,0 +1,9 @@
+[gd_resource type="Resource" load_steps=3 format=3 uid="uid://bil72jwbaokfe"]
+
+[ext_resource type="Script" path="res://Scripts/Data/icon.gd" id="1_tw83k"]
+[ext_resource type="Texture2D" uid="uid://duswjtofr70mf" path="res://assets/UI/hungerhalf.png" id="2_ccjor"]
+
+[resource]
+script = ExtResource("1_tw83k")
+name = ""
+texture = ExtResource("2_ccjor")

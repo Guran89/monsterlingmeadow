@@ -1,6 +1,6 @@
 extends VBoxContainer
 
-const FOOD_ITEM_UI = preload("res://Scenes/food_item_ui.tscn")
+var FOOD_ITEM_UI = load("res://Scenes/food_item_ui.tscn")
 
 func _on_toggle_pressed():
 	visible = !visible

@@ -1,8 +1,8 @@
 [gd_resource type="Resource" load_steps=9 format=3 uid="uid://bs54fbyhrblne"]
 
-[ext_resource type="Texture2D" uid="uid://c74at6btiunhs" path="res://Assets/Monsterling/eyes/eyes4_idle.png" id="1_stdgf"]
+[ext_resource type="Texture2D" uid="uid://c74at6btiunhs" path="res://assets/Monsterling/eyes/eyes4_idle.png" id="1_stdgf"]
 [ext_resource type="Script" path="res://Scripts/Data/Monsterling/eyes.gd" id="2_1rsj0"]
-[ext_resource type="Texture2D" uid="uid://brmnsyo3fmbjo" path="res://Assets/Monsterling/eyes/eyes4.png" id="3_5y38g"]
+[ext_resource type="Texture2D" uid="uid://brmnsyo3fmbjo" path="res://assets/Monsterling/eyes/eyes4.png" id="3_5y38g"]
 
 [sub_resource type="AtlasTexture" id="AtlasTexture_lqr6p"]
 atlas = ExtResource("1_stdgf")

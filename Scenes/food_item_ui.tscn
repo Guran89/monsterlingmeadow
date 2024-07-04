@@ -1,6 +1,6 @@
 [gd_scene load_steps=3 format=3 uid="uid://brmc65v1ncifu"]
 
-[ext_resource type="Texture2D" uid="uid://r2njkb2ffao2" path="res://Assets/UI/chickenskewer.png" id="1_t3h4t"]
+[ext_resource type="Texture2D" uid="uid://r2njkb2ffao2" path="res://assets/UI/chickenskewer.png" id="1_t3h4t"]
 [ext_resource type="Script" path="res://Scripts/food_item.gd" id="2_whi4v"]
 
 [node name="Icon" type="TextureRect"]

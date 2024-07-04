@@ -34,6 +34,13 @@ var _eyes
 @onready var mouth_sprite = $mouths
 @onready var torso_sprite = $torsos
 
+@onready var _torso = get_random(Data.torsos.values())
+@onready var _head = get_random(Data.heads.values())
+@onready var _arms = get_random(Data.arms.values())
+@onready var _legs = get_random(Data.legs.values())
+@onready var _mouth = get_random(Data.mouths.values())
+@onready var _eyes = get_random(Data.eyes.values())
+
 # Timers for animations
 @onready var head_timer = $heads/HeadTimer
 @onready var arm_timer = $arms/ArmTimer
@@ -45,13 +52,6 @@ func _ready():
 	Events.time_changed.connect(_on_time_changed)
 
 	randomize()
-
-	_torso = get_random(Data.torsos.values())
-	_head = get_random(Data.heads.values())
-	_arms = get_random(Data.arms.values())
-	_legs = get_random(Data.legs.values())
-	_mouth = get_random(Data.mouths.values())
-	_eyes = get_random(Data.eyes.values())
 
 	head_sprite.sprite_frames = _head.idle_animation
 	mouth_sprite.sprite_frames = _mouth.idle_animation
