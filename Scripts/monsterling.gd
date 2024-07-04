@@ -16,13 +16,6 @@ extends Node2D
 @export_range(1, 20) var arms_timer_max: int = 8
 @export_range(1, 20) var arms_timer_min: int = 3
 
-var _torso
-var _head
-var _arms
-var _legs
-var _mouth
-var _eyes
-
 @onready var _feed_area = $FeedArea
 @onready var _hunger = $Hunger
 
