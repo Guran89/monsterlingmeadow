@@ -11,6 +11,12 @@ extends Node2D
 @onready var mouth_sprite = $mouths
 @onready var torso_sprite = $torsos
 
+# Timers for animations
+@onready var head_timer = $heads/HeadTimer
+@onready var arm_timer = $arms/ArmTimer
+@onready var eye_timer = $eyes/EyeTimer
+
+
 @export var resource: DialogueResource
 @export var dialogueStart: String
 
@@ -39,9 +45,9 @@ func _ready():
 	arm_sprite.sprite_frames = _arms.idle_animation
 	eye_sprite.sprite_frames = _eyes.idle_animation
 
-	for i in get_children():
-		if i is AnimatedSprite2D:
-			i.play()
+	#for i in get_children():
+		#if i is AnimatedSprite2D:
+			#i.play()
 
 func get_random(array):
 	return array[randi() % array.size()]
@@ -72,3 +78,23 @@ func _unhandled_input(_event):
 		print("Start dialogue")
 		var _dialogue_line = await DialogueManager.get_next_dialogue_line(resource, dialogueStart)
 		DialogueManager.show_dialogue_balloon_scene("res://Scenes/balloon.tscn", resource)
+
+
+func _on_eye_timer_timeout():
+	randomize()
+	eye_sprite.play()
+	var timer_wait_time = randi_range(3, 5)
+	eye_timer.wait_time = timer_wait_time
+	print(eye_timer.wait_time)
+
+
+func _on_head_timer_timeout():
+	head_sprite.play()
+	var timer_wait_time = randi_range(2, 5)
+	head_timer.wait_time = timer_wait_time
+
+
+func _on_arm_timer_timeout():
+	arm_sprite.play()
+	var timer_wait_time = randi_range(3, 8)
+	arm_timer.wait_time = timer_wait_time

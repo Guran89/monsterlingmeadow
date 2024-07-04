@@ -1,24 +1,24 @@
 [gd_scene load_steps=114 format=3 uid="uid://bcbf5j30mg5kx"]
 
 [ext_resource type="Script" path="res://Scripts/monsterling.gd" id="1_h0e5p"]
-[ext_resource type="Texture2D" uid="uid://cvmkd5a3r11vn" path="res://assets/Monsterling/torsos/torso1.png" id="2_kmdhv"]
-[ext_resource type="Texture2D" uid="uid://bylg7gsul8vi4" path="res://assets/Monsterling/heads/head1_idle.png" id="3_iytew"]
-[ext_resource type="Texture2D" uid="uid://buu54fwopet81" path="res://assets/Monsterling/heads/head2_idle.png" id="4_j1hei"]
-[ext_resource type="Texture2D" uid="uid://0u0y0hp112ew" path="res://assets/Monsterling/heads/head3_idle.png" id="5_0t2vp"]
-[ext_resource type="Texture2D" uid="uid://dyqwacyrds8kw" path="res://assets/Monsterling/heads/head4_idle.png" id="6_gknmn"]
-[ext_resource type="Texture2D" uid="uid://xbh6c5wtl7aq" path="res://assets/Monsterling/arms/arms1_idle.png" id="7_1cb48"]
-[ext_resource type="Texture2D" uid="uid://ccf0hedhaerfv" path="res://assets/Monsterling/arms/arms2_idle.png" id="8_x1s5x"]
-[ext_resource type="Texture2D" uid="uid://dq0vurcvt62ai" path="res://assets/Monsterling/arms/arms3_idle.png" id="9_e1jns"]
-[ext_resource type="Texture2D" uid="uid://cd3vqvgnttl5m" path="res://assets/Monsterling/arms/arms4_idle.png" id="10_bu0nq"]
-[ext_resource type="Texture2D" uid="uid://v61nncx7mf7q" path="res://assets/Monsterling/legs/legs1.png" id="11_0gw3i"]
-[ext_resource type="Texture2D" uid="uid://c6wwrwv1jld2b" path="res://assets/Monsterling/mouths/mouth1_idle.png" id="12_hnb56"]
-[ext_resource type="Texture2D" uid="uid://bkr2c5v36m41b" path="res://assets/Monsterling/mouths/mouth2.png" id="13_kvc1o"]
-[ext_resource type="Texture2D" uid="uid://8kxebwkjv7tb" path="res://assets/Monsterling/mouths/mouth3.png" id="14_di8xu"]
-[ext_resource type="Texture2D" uid="uid://nyiwyp0mk2rc" path="res://assets/Monsterling/mouths/mouth4.png" id="15_586ef"]
-[ext_resource type="Texture2D" uid="uid://d1dvx7emljkv7" path="res://assets/Monsterling/eyes/eyes1_idle.png" id="16_6vfrm"]
-[ext_resource type="Texture2D" uid="uid://crsfyp4s654j" path="res://assets/Monsterling/eyes/eyes2_idle.png" id="17_8fqxp"]
-[ext_resource type="Texture2D" uid="uid://dyjhltuuvwldc" path="res://assets/Monsterling/eyes/eyes3_idle.png" id="18_fsxc2"]
-[ext_resource type="Texture2D" uid="uid://c74at6btiunhs" path="res://assets/Monsterling/eyes/eyes4_idle.png" id="19_5pbn3"]
+[ext_resource type="Texture2D" uid="uid://cvmkd5a3r11vn" path="res://Assets/Monsterling/torsos/torso1.png" id="2_kmdhv"]
+[ext_resource type="Texture2D" uid="uid://bylg7gsul8vi4" path="res://Assets/Monsterling/heads/head1_idle.png" id="3_iytew"]
+[ext_resource type="Texture2D" uid="uid://buu54fwopet81" path="res://Assets/Monsterling/heads/head2_idle.png" id="4_j1hei"]
+[ext_resource type="Texture2D" uid="uid://0u0y0hp112ew" path="res://Assets/Monsterling/heads/head3_idle.png" id="5_0t2vp"]
+[ext_resource type="Texture2D" uid="uid://dyqwacyrds8kw" path="res://Assets/Monsterling/heads/head4_idle.png" id="6_gknmn"]
+[ext_resource type="Texture2D" uid="uid://xbh6c5wtl7aq" path="res://Assets/Monsterling/arms/arms1_idle.png" id="7_1cb48"]
+[ext_resource type="Texture2D" uid="uid://ccf0hedhaerfv" path="res://Assets/Monsterling/arms/arms2_idle.png" id="8_x1s5x"]
+[ext_resource type="Texture2D" uid="uid://dq0vurcvt62ai" path="res://Assets/Monsterling/arms/arms3_idle.png" id="9_e1jns"]
+[ext_resource type="Texture2D" uid="uid://cd3vqvgnttl5m" path="res://Assets/Monsterling/arms/arms4_idle.png" id="10_bu0nq"]
+[ext_resource type="Texture2D" uid="uid://v61nncx7mf7q" path="res://Assets/Monsterling/legs/legs1.png" id="11_0gw3i"]
+[ext_resource type="Texture2D" uid="uid://c6wwrwv1jld2b" path="res://Assets/Monsterling/mouths/mouth1_idle.png" id="12_hnb56"]
+[ext_resource type="Texture2D" uid="uid://bkr2c5v36m41b" path="res://Assets/Monsterling/mouths/mouth2.png" id="13_kvc1o"]
+[ext_resource type="Texture2D" uid="uid://8kxebwkjv7tb" path="res://Assets/Monsterling/mouths/mouth3.png" id="14_di8xu"]
+[ext_resource type="Texture2D" uid="uid://nyiwyp0mk2rc" path="res://Assets/Monsterling/mouths/mouth4.png" id="15_586ef"]
+[ext_resource type="Texture2D" uid="uid://d1dvx7emljkv7" path="res://Assets/Monsterling/eyes/eyes1_idle.png" id="16_6vfrm"]
+[ext_resource type="Texture2D" uid="uid://crsfyp4s654j" path="res://Assets/Monsterling/eyes/eyes2_idle.png" id="17_8fqxp"]
+[ext_resource type="Texture2D" uid="uid://dyjhltuuvwldc" path="res://Assets/Monsterling/eyes/eyes3_idle.png" id="18_fsxc2"]
+[ext_resource type="Texture2D" uid="uid://c74at6btiunhs" path="res://Assets/Monsterling/eyes/eyes4_idle.png" id="19_5pbn3"]
 [ext_resource type="Script" path="res://Scripts/hunger.gd" id="20_d8kld"]
 [ext_resource type="Script" path="res://Scripts/feed_area.gd" id="20_ed1bo"]
 
@@ -739,9 +739,17 @@ sprite_frames = SubResource("SpriteFrames_w3lus")
 sprite_frames = SubResource("SpriteFrames_fxtkb")
 animation = &"idle1"
 
+[node name="HeadTimer" type="Timer" parent="heads"]
+wait_time = 3.0
+autostart = true
+
 [node name="arms" type="AnimatedSprite2D" parent="."]
 sprite_frames = SubResource("SpriteFrames_ctv6e")
 animation = &"idle4"
+
+[node name="ArmTimer" type="Timer" parent="arms"]
+wait_time = 5.0
+autostart = true
 
 [node name="legs" type="AnimatedSprite2D" parent="."]
 sprite_frames = SubResource("SpriteFrames_lcr68")
@@ -749,7 +757,12 @@ animation = &"idle1"
 
 [node name="eyes" type="AnimatedSprite2D" parent="."]
 sprite_frames = SubResource("SpriteFrames_dx0db")
-animation = &"idle1"
+animation = &"idle3"
+frame_progress = 0.756357
+
+[node name="EyeTimer" type="Timer" parent="eyes"]
+wait_time = 2.0
+autostart = true
 
 [node name="mouths" type="AnimatedSprite2D" parent="."]
 sprite_frames = SubResource("SpriteFrames_0ihc2")
@@ -765,6 +778,9 @@ shape = SubResource("CircleShape2D_wcdec")
 [node name="Hunger" type="Node" parent="."]
 script = ExtResource("20_d8kld")
 
+[connection signal="timeout" from="heads/HeadTimer" to="." method="_on_head_timer_timeout"]
+[connection signal="timeout" from="arms/ArmTimer" to="." method="_on_arm_timer_timeout"]
+[connection signal="timeout" from="eyes/EyeTimer" to="." method="_on_eye_timer_timeout"]
 [connection signal="animation_finished" from="mouths" to="." method="_on_mouths_animation_finished"]
 [connection signal="body_entered" from="FeedArea" to="FeedArea" method="_on_body_entered"]
 [connection signal="input_event" from="FeedArea" to="." method="_on_feed_area_input_event"]
