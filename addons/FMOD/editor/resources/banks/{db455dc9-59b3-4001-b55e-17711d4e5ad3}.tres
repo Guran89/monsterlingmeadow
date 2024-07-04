@@ -1,0 +1,8 @@
+[gd_resource type="BankAsset" format=3 uid="uid://dmte3dxjq4ao6"]
+
+[resource]
+file_path = "res://addons/FMOD/Mobile/Master.bank"
+modified_time = 1719676906
+path = "bank:/Master"
+guid = "{db455dc9-59b3-4001-b55e-17711d4e5ad3}"
+name = "Master"

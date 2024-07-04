@@ -1,0 +1,9 @@
+[gd_resource type="EventAsset" format=3 uid="uid://ddj3usreirkbd"]
+
+[resource]
+is_oneshot = true
+min_distance = 1.0
+max_distance = 20.0
+path = "event:/SFX/Monster/idle_eyes_blink"
+guid = "{c4f8c403-e81f-4b14-b9e7-2603092288fb}"
+name = "idle_eyes_blink"

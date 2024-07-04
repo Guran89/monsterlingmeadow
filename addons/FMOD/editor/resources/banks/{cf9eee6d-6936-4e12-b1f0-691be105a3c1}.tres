@@ -1,0 +1,8 @@
+[gd_resource type="BankAsset" format=3 uid="uid://ihea6cxnnah5"]
+
+[resource]
+file_path = "res://addons/FMOD/Mobile/SFX.bank"
+modified_time = 1719676906
+path = "bank:/SFX"
+guid = "{cf9eee6d-6936-4e12-b1f0-691be105a3c1}"
+name = "SFX"

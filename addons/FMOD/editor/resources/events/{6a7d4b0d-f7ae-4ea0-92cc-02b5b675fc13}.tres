@@ -1,0 +1,9 @@
+[gd_resource type="EventAsset" format=3 uid="uid://cxps0xycpx07o"]
+
+[resource]
+is_oneshot = true
+min_distance = 1.0
+max_distance = 20.0
+path = "event:/SFX/Monster/eat_blush"
+guid = "{6a7d4b0d-f7ae-4ea0-92cc-02b5b675fc13}"
+name = "eat_blush"

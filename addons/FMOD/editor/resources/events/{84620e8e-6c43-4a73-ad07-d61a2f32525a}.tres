@@ -1,0 +1,9 @@
+[gd_resource type="EventAsset" format=3 uid="uid://ddp2tlxmmq531"]
+
+[resource]
+is_oneshot = true
+min_distance = 1.0
+max_distance = 20.0
+path = "event:/SFX/Monster/eat_mouthopen"
+guid = "{84620e8e-6c43-4a73-ad07-d61a2f32525a}"
+name = "eat_mouthopen"

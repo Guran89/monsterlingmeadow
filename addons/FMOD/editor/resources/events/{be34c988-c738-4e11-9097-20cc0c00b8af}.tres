@@ -1,0 +1,9 @@
+[gd_resource type="EventAsset" format=3 uid="uid://c16wb0dg2lajp"]
+
+[resource]
+is_oneshot = true
+min_distance = 1.0
+max_distance = 20.0
+path = "event:/SFX/Monster/idle_mouth_breath"
+guid = "{be34c988-c738-4e11-9097-20cc0c00b8af}"
+name = "idle_mouth_breath"

@@ -1,0 +1,9 @@
+[gd_resource type="EventAsset" format=3 uid="uid://cy3a41ok42fbt"]
+
+[resource]
+is_oneshot = true
+min_distance = 1.0
+max_distance = 20.0
+path = "event:/SFX/Monster/idle_head_ears_wiggle"
+guid = "{9a0d08ea-478a-4a5b-8f31-6a7b2f306f68}"
+name = "idle_head_ears_wiggle"

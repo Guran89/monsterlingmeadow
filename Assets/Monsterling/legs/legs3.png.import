@@ -3,15 +3,15 @@
 importer="texture"
 type="CompressedTexture2D"
 uid="uid://d2bdkdv1xb5rc"
-path="res://.godot/imported/legs3.png-be8c8d18675434897897848dafb5c500.ctex"
+path="res://.godot/imported/legs3.png-0a63666107bcdd4fdf7d33232b1f8584.ctex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://assets/Monsterling/legs/legs3.png"
-dest_files=["res://.godot/imported/legs3.png-be8c8d18675434897897848dafb5c500.ctex"]
+source_file="res://Assets/Monsterling/legs/legs3.png"
+dest_files=["res://.godot/imported/legs3.png-0a63666107bcdd4fdf7d33232b1f8584.ctex"]
 
 [params]
 
