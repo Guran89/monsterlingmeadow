@@ -94,6 +94,7 @@ func _on_mouths_animation_finished():
 
 func _unhandled_input(_event):
 	if Input.is_action_just_pressed("Space"):
+		#DialogueManager.show_dialogue_balloon(resource, dialogueStart)
 		print("Start dialogue")
 		var _dialogue_line = await DialogueManager.get_next_dialogue_line(resource, dialogueStart)
 		DialogueManager.show_dialogue_balloon_scene("res://Scenes/balloon.tscn", resource)
