@@ -50,7 +50,8 @@ func _ready():
 	mouth_sprite.sprite_frames = _mouth.idle_animation
 	arm_sprite.sprite_frames = _arms.idle_animation
 	eye_sprite.sprite_frames = _eyes.idle_animation
-
+	
+	mouth_sprite.play()
 	#for i in get_children():
 		#if i is AnimatedSprite2D:
 			#i.play()
