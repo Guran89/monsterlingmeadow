@@ -39,6 +39,7 @@ extends Node2D
 @onready var arm_timer = $arms/ArmTimer
 @onready var eye_timer = $eyes/EyeTimer
 
+@onready var hunger_timer: Timer = $Hunger/HungerTimer
 
 func _ready():
 	Events.food_item_dropped.connect(_on_food_item_dropped)
@@ -70,6 +71,7 @@ func _on_food_item_dropped(food_item):
 		_hunger.change_hunger(food_item.get_food().nutrition)
 		mouth_sprite.sprite_frames = _mouth.eat_animation
 		mouth_sprite.play()
+		hunger_timer.start()
 		
 		if _mouth.name == "mouth1":
 			FMODRuntime.play_one_shot_path("event:/SFX/Monster/eat_tongue")
@@ -120,3 +122,7 @@ func _on_arm_timer_timeout():
 	FMODRuntime.play_one_shot_path("event:/SFX/Monster/idle_arms_scratch")
 	var timer_wait_time = randi_range(arms_timer_min, arms_timer_max)
 	arm_timer.wait_time = timer_wait_time
+
+
+func _on_hunger_timer_timeout() -> void:
+	_hunger.change_hunger(Constants.FOOD_LOSS_PER_DAY)
