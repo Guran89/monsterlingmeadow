@@ -1,0 +1,15 @@
+[remap]
+
+importer="dialogue_manager_compiler_12"
+type="Resource"
+uid="uid://bfggdhl7gb8ld"
+path="res://.godot/imported/The_crystal_egg.dialogue-0809b0faa6667f027b74b8c36770c431.tres"
+
+[deps]
+
+source_file="res://Dialogues/The_crystal_egg.dialogue"
+dest_files=["res://.godot/imported/The_crystal_egg.dialogue-0809b0faa6667f027b74b8c36770c431.tres"]
+
+[params]
+
+defaults=true
