@@ -3,7 +3,6 @@
 [ext_resource type="Script" path="res://Scripts/hunger_ui_icon.gd" id="2_0oj5w"]
 
 [sub_resource type="CompressedTexture2D" id="CompressedTexture2D_55woa"]
-load_path = "res://.godot/imported/hungerempty.png-4d02f6f9674bbc4573ed856cb031b949.ctex"
 
 [node name="HungerIcon" type="TextureRect"]
 texture = SubResource("CompressedTexture2D_55woa")

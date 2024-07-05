@@ -1,6 +1,6 @@
 extends HBoxContainer
 
-var HUNGER_UI = load("res://Scenes/hunger_ui.tscn")
+var HUNGER_UI = preload("res://Scenes/hunger_ui.tscn")
 
 func _ready():
 	Events.hunger_changed.connect(_on_hunger_changed)

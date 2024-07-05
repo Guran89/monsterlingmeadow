@@ -11,3 +11,8 @@ func _on_timeout():
 	_time = (_time + 1) % _max_time
 
 	Events.time_changed.emit(Data.times.values()[_time])
+
+#func _unhandled_input(event: InputEvent) -> void:
+	#if Input.is_action_just_pressed("ChangeTime"):
+		#_time = (_time + 1) % _max_time
+		#Events.time_changed.emit(Data.times.values()[_time])
