@@ -8,7 +8,6 @@ func _ready():
 func change_hunger(change):
 	hunger = clamp(hunger + change, Constants.MIN_HUNGER, Constants.MAX_HUNGER)
 	Events.hunger_changed.emit(hunger)
-	print("hunger changed: ", hunger)
 
 func _on_game_ready():
 	change_hunger(Constants.MIN_HUNGER)
