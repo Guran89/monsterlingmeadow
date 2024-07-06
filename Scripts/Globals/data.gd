@@ -12,6 +12,8 @@ var mouths = loadCategory("Mouths")
 var torsos = loadCategory("Torsos")
 var icons = loadCategory("Icons")
 
+var time = 1
+
 func loadCategory(category):
 	return loadDirectory(DATA_PATH + category + "/", category)
 

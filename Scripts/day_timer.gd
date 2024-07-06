@@ -1,6 +1,6 @@
 extends Timer
 
-var _time = 1
+#var _time = Data.time
 var _max_time = Data.times.size()
 
 func _ready():
@@ -17,5 +17,6 @@ func _ready():
 
 func _unhandled_input(event: InputEvent) -> void:
 	if Input.is_action_just_pressed("ChangeTime"):
-		_time = (_time + 1) % _max_time
-		Events.time_changed.emit(Data.times.values()[_time])
+		Data.time = (Data.time + 1) % _max_time
+		Events.time_changed.emit(Data.times.values()[Data.time])
+		print(Data.time)
