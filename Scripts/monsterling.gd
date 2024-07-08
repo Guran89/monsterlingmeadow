@@ -86,8 +86,9 @@ func _on_food_item_dropped(food_item):
 			FMODRuntime.play_one_shot_path("event:/SFX/Monster/eat_eyesclosed")
 
 func _on_time_changed(time):
-	if time == Data.times.DAY || time == Data.times.NIGHT:
-		_hunger.change_hunger(Constants.FOOD_LOSS_PER_DAY)
+	pass
+	#if time == Data.times.DAY || time == Data.times.NIGHT:
+		#_hunger.change_hunger(Constants.FOOD_LOSS_PER_DAY)
 
 
 func _on_mouths_animation_finished():

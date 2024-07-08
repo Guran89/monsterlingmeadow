@@ -91,6 +91,7 @@ script = ExtResource("7_pde2k")
 script = ExtResource("9_2aqky")
 
 [node name="DayTimer" type="Timer" parent="."]
+autostart = true
 script = ExtResource("10_n5l6r")
 
 [connection signal="pressed" from="CanvasLayer/BottomMenu/FoodMenu/Toggle" to="CanvasLayer/BottomMenu/FoodMenu/FoodItems" method="_on_toggle_pressed"]
