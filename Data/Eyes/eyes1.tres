@@ -1,8 +1,8 @@
 [gd_resource type="Resource" load_steps=12 format=3 uid="uid://ck3owf1ywrskx"]
 
-[ext_resource type="Texture2D" uid="uid://d1dvx7emljkv7" path="res://assets/Monsterling/eyes/eyes1_idle.png" id="1_nm88j"]
+[ext_resource type="Texture2D" uid="uid://d1dvx7emljkv7" path="res://Assets/Monsterling/eyes/eyes1_idle.png" id="1_nm88j"]
 [ext_resource type="Script" path="res://Scripts/Data/Monsterling/eyes.gd" id="2_g1g7d"]
-[ext_resource type="Texture2D" uid="uid://peuqcybajs0j" path="res://assets/Monsterling/eyes/eyes1.png" id="3_w7spd"]
+[ext_resource type="Texture2D" uid="uid://peuqcybajs0j" path="res://Assets/Monsterling/eyes/eyes1.png" id="3_w7spd"]
 
 [sub_resource type="AtlasTexture" id="AtlasTexture_q45kh"]
 atlas = ExtResource("1_nm88j")
@@ -58,7 +58,7 @@ animations = [{
 }],
 "loop": true,
 "name": &"default",
-"speed": 5.0
+"speed": 10.0
 }]
 
 [resource]
