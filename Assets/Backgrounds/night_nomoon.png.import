@@ -2,16 +2,16 @@
 
 importer="texture"
 type="CompressedTexture2D"
-uid="uid://bypjy4pkbt2aq"
-path="res://.godot/imported/eyes3_blink2.png-ff0b022faef07b5324804dadbf9aa7af.ctex"
+uid="uid://c608k6polkfjt"
+path="res://.godot/imported/night_nomoon.png-cb0ce171bfb072c1093a9ddb6c43e530.ctex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://Assets/Monsterling/eyes/eyes3_blink2.png"
-dest_files=["res://.godot/imported/eyes3_blink2.png-ff0b022faef07b5324804dadbf9aa7af.ctex"]
+source_file="res://Assets/Backgrounds/night_nomoon.png"
+dest_files=["res://.godot/imported/night_nomoon.png-cb0ce171bfb072c1093a9ddb6c43e530.ctex"]
 
 [params]
 

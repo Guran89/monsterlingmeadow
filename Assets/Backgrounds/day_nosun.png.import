@@ -2,16 +2,16 @@
 
 importer="texture"
 type="CompressedTexture2D"
-uid="uid://bypjy4pkbt2aq"
-path="res://.godot/imported/eyes3_blink2.png-ff0b022faef07b5324804dadbf9aa7af.ctex"
+uid="uid://cfdie48kxxyr2"
+path="res://.godot/imported/day_nosun.png-95d85bbad58b6fe086edc7a3069be0cc.ctex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://Assets/Monsterling/eyes/eyes3_blink2.png"
-dest_files=["res://.godot/imported/eyes3_blink2.png-ff0b022faef07b5324804dadbf9aa7af.ctex"]
+source_file="res://Assets/Backgrounds/day_nosun.png"
+dest_files=["res://.godot/imported/day_nosun.png-95d85bbad58b6fe086edc7a3069be0cc.ctex"]
 
 [params]
 

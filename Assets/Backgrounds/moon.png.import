@@ -2,16 +2,16 @@
 
 importer="texture"
 type="CompressedTexture2D"
-uid="uid://bypjy4pkbt2aq"
-path="res://.godot/imported/eyes3_blink2.png-ff0b022faef07b5324804dadbf9aa7af.ctex"
+uid="uid://8q28yu82rx80"
+path="res://.godot/imported/moon.png-8d0776d2a20f8f0615aa646a72a8433c.ctex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://Assets/Monsterling/eyes/eyes3_blink2.png"
-dest_files=["res://.godot/imported/eyes3_blink2.png-ff0b022faef07b5324804dadbf9aa7af.ctex"]
+source_file="res://Assets/Backgrounds/moon.png"
+dest_files=["res://.godot/imported/moon.png-8d0776d2a20f8f0615aa646a72a8433c.ctex"]
 
 [params]
 

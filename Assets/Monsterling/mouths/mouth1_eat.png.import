@@ -3,15 +3,15 @@
 importer="texture"
 type="CompressedTexture2D"
 uid="uid://bnrdd5jrqnmnk"
-path="res://.godot/imported/mouth1_eat.png-03af8e96131562e5f26a5c530aa01f16.ctex"
+path="res://.godot/imported/mouth1_eat.png-b76db5e52ff3900a3542a8ac8f2ca4e2.ctex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://assets/Monsterling/mouths/mouth1_eat.png"
-dest_files=["res://.godot/imported/mouth1_eat.png-03af8e96131562e5f26a5c530aa01f16.ctex"]
+source_file="res://Assets/Monsterling/mouths/mouth1_eat.png"
+dest_files=["res://.godot/imported/mouth1_eat.png-b76db5e52ff3900a3542a8ac8f2ca4e2.ctex"]
 
 [params]
 
